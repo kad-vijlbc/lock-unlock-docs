@@ -11,14 +11,14 @@
         <link rel="canonical" href="https://kadaster-labs.github.io/lock-unlock-docs/dev/federatieve-bevraging/informatiekundigekern/">
       
       
-        <link rel="prev" href="../linkeddata/">
+        <link rel="prev" href="../informatiemodel/">
       
       
-        <link rel="next" href="../informatiemodel/">
+        <link rel="next" href="../testopstelling/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -375,6 +375,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../informatiemodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informatiemodel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -430,31 +451,40 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stap-1-onafhankelijke-registers" class="md-nav__link">
+  <a href="#stap-1-onafhankelijke-registraties" class="md-nav__link">
     <span class="md-ellipsis">
-      Stap 1. Onafhankelijke Registers
+      Stap 1. Onafhankelijke Registraties
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stap-2-registers-als-linked-data" class="md-nav__link">
+  <a href="#stap-2-registraties-als-linked-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Stap 2. Registers als Linked Data
+      Stap 2. Registraties als Linked Data
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stap-3-formele-verbinding-van-registers" class="md-nav__link">
+  <a href="#stap-3-toevoegen-van-context-binnen-registraties" class="md-nav__link">
     <span class="md-ellipsis">
-      Stap 3. Formele Verbinding van Registers
+      Stap 3. Toevoegen van Context Binnen Registraties
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Stap 3. Formele Verbinding van Registers">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-4-formele-verbinding-van-registraties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 4. (Formele) Verbinding van Registraties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stap 4. (Formele) Verbinding van Registraties">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -498,27 +528,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../informatiemodel/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Informatiemodel
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1266,31 +1275,40 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stap-1-onafhankelijke-registers" class="md-nav__link">
+  <a href="#stap-1-onafhankelijke-registraties" class="md-nav__link">
     <span class="md-ellipsis">
-      Stap 1. Onafhankelijke Registers
+      Stap 1. Onafhankelijke Registraties
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stap-2-registers-als-linked-data" class="md-nav__link">
+  <a href="#stap-2-registraties-als-linked-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Stap 2. Registers als Linked Data
+      Stap 2. Registraties als Linked Data
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#stap-3-formele-verbinding-van-registers" class="md-nav__link">
+  <a href="#stap-3-toevoegen-van-context-binnen-registraties" class="md-nav__link">
     <span class="md-ellipsis">
-      Stap 3. Formele Verbinding van Registers
+      Stap 3. Toevoegen van Context Binnen Registraties
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Stap 3. Formele Verbinding van Registers">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-4-formele-verbinding-van-registraties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stap 4. (Formele) Verbinding van Registraties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stap 4. (Formele) Verbinding van Registraties">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1351,13 +1369,11 @@
   <h1>Informatiekundige Kern</h1>
 
 <p>Een kernprincipe bij de ontwikkeling van het federatief datastelsel is het concept van een informatiekundige kern. Deze informatiekundige kern ondersteunt het koppelen van eerder verspreide basisregistraties via een set vooraf gedefinieerde relaties (zie <a href="https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/stelsel-van-basisregistraties-toegankelijke-beschrijving/">Stelsel van Basisregistraties</a>). Deze geïdentificeerde relaties vertegenwoordigen de relaties die het meest algemeen worden gebruikt bij het combineren van gegevens uit verschillende bronnen voor een bepaald doel. Het idee is dat door deze 'kern' te formaliseren, gebruikers van de data deze informatie gemakkelijker kunnen opvragen.</p>
-<p>Het concept van een informatiekundige kern heeft affiniteit met linked data technologies vanwege de inherente ondersteuning van laatstgenoemde voor het koppelen van gedistribueerde gegevensbronnen. Wel is het zo dat Linked Data meerdere mogelijkheden biedt voor het ondersteunen van federatieve bevragingen. Zo is het bijvoorbeeld zeer goed mogelijk om meerdere bronnen federatief te bevragen zonder dat er een expliciete koppeling is tussen de bronnen. Wel moet er natuurlijk een gemeenschappelijke data-element zijn om te kunnen verbinden: denk hierbij aan Naam, Adres, BagID, KVK nummer, BSN, etc. Nadat het element in een ander gevonden is (bijvoorbeeld een sparql query om een Persoon op te halen in de BRP op basis van Naam, geboortedatum, etc) kan er een directe link gelegd worden. Daarmee wordt het makkelijker om federatief te bevragen.</p>
-<p>Ook biedt Linked data mogelijkheden om onafhankelijke datasets 'achteraf' te koppelen. Door bijvoorbeeld de datasets te voorzien van extra context op basis van gestandardiseerde ontologieën zoals RDFS, OWL en SHACL kunnen de bestaande datasets verrijkt kunnen worden met nieuwe data. Deze nieuwe data kan ook leiden tot koppelingen tussen de gedistribueerde gegevensbronnen. </p>
-<p>Omdat het startpunt voor het Lock-Unlock project de doorontwikkeling van het IGO project was, was het gebruik van linked data technologie logisch voor dit project. Hoewel het project deze technologieën gebruikt om gegevensbronnen te koppelen is Linked Data technologie niet de enige manier voor federatieve bevragingen. Andere oplossingen zijn echter niet verder onderzocht of getest als onderdeel van dit project.</p>
-<p>De volgende discussie presenteert twee opties voor het ontwerp van een informatiekundige kern met behulp van linked data technologie. Eén van deze opties wordt vervolgens meegenomen in het ontwerp van het informatiemodel voor dit project. Het is belangrijk op te merken dat, hoewel het informatiemodel en het gebruik ervan binnen dit project, de toegevoegde waarde aantoont van geformaliseerde relaties voor het ondersteunen van federatieve bevraging tussen informatiebronnen, het geen definitieve conclusies biedt over wat de inhoud van de informatiekundige kern zou moeten zijn. Dit komt omdat de gegevens die voor dit project werden gebruikt, aanzienlijk zijn vereenvoudigd om te voldoen aan de minimale vereisten van de ontworpen demonstrator. Elk onderzoek naar de uitdagingen en randgevallen die van invloed zijn op de complexiteit van het ontwerp van een informatiekundige kern viel buiten de scope van dit project.</p>
+<p>Omdat het startpunt voor het Lock-Unlock project de doorontwikkeling van het IGO project was, was het gebruik van linked data technologie logisch voor dit project. Hoewel het project deze technologieën gebruikt om gegevensbronnen te koppelen is linked aata technologie niet de enige manier voor federatieve bevragingen. Andere oplossingen zijn echter niet verder onderzocht of getest als onderdeel van dit project. De volgende discussie presenteert een stappen plan voor federatieve bevragingen op basis van linked data en bij fase drie ook verschillende opties voor het ontwerp van een informatiekundige kern met behulp van linked data technologies. Eén van deze opties is meegenomen in het ontwerp van het <a href="../informatiemodel/">informatiemodel</a> voor dit project. </p>
+<p>Het is belangrijk op te merken dat, hoewel het informatiemodel en het gebruik ervan binnen dit project, de toegevoegde waarde aantoont van geformaliseerde relaties voor het ondersteunen van federatieve bevraging tussen informatiebronnen, het geen definitieve conclusies biedt over wat de inhoud van de informatiekundige kern zou moeten zijn. Dit komt omdat de gegevens die voor dit project werden gebruikt, aanzienlijk zijn vereenvoudigd om te voldoen aan de minimale vereisten van de ontworpen demonstrator. Elk onderzoek naar de uitdagingen en randgevallen die van invloed zijn op de complexiteit van het ontwerp van een informatiekundige kern viel buiten de scope van dit project.</p>
 <h3 id="federatief-datastelsel-als-linked-data">Federatief Datastelsel als Linked Data</h3>
 <p>Er zijn een aantal stappen die moeten worden genomen bij het ontwikkelen van een federatief datastelsel met behulp van linked data. Eén van deze stappen omvat de definitie van de informatiekundige kern. </p>
-<h4 id="stap-1-onafhankelijke-registers">Stap 1. Onafhankelijke Registers</h4>
+<h4 id="stap-1-onafhankelijke-registraties">Stap 1. Onafhankelijke Registraties</h4>
 <p>De basisregistraties (e.g. BRK, BAG, BRP en NHR) zijn relatief onafhankelijk van elkaar ontwikkeld door verschillende organisaties, techniek en modellen. Zo beheert Kadaster bijvoorbeeld de BRK en de KvK het NHR. Ook de modellering en standardisatie van de gegevens kan verschillen. Zo zijn, bijvoorbeeld, de NEN3610 en Geonovum's IM-modellen de basis voor de datasets van Kadaster terwijl deze standaarden minder van belang zijn bij andere registers. Door de onafhankelijke ontwikkeling van registers ontstaan zogenaamde data silo’s. Abstract wordt deze situatie als volgt gevisualiseerd. </p>
 <table>
 <thead>
@@ -1371,7 +1387,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="stap-2-registers-als-linked-data">Stap 2. Registers als Linked Data</h4>
+<h4 id="stap-2-registraties-als-linked-data">Stap 2. Registraties als Linked Data</h4>
 <p>De bron van alle registers is vooralsnog geen Linked Data. Een ontwikkeling naar Linked Data toe zou kunnen door de bestaande situatie uit te breiden met een publicatie van de gegevens in Linked Data. Er zijn steeds meer implementaties en standaarden aanwezig om Linked Data te genereren vanuit een andere type bron zoals bijvoorbeeld een SQL database. Denk hierbij bijvoorbeeld aan <a href="https://rml.io/">RML</a> of <a href="https://www.w3.org/TR/r2rml/">R2RML</a>. Ook maakt <a href="https://www.w3.org/TR/json-ld11/">JSON-LD</a> de stap naar Linked Data wat makkelijker voor implementaties die werken met JSON denk bijvoorbeeld aan JSON api's. Het volgende diagram toont de creatie van Linked Data 'silo's voor elk van de oorspronkelijke gegevensbronnen.</p>
 <table>
 <thead>
@@ -1389,7 +1405,7 @@
 <p><strong>4 Star Linked Data:</strong> Omdat deze informatie nu als Linked Data wordt gepubliceerd met behulp van de verschillende open Linked Data-standaarden, kan deze informatie worden beoordeeld volgens het <a href="../linkeddata/#basis-principes">5-sterrenmodel</a>. Op dit moment worden de individuele Linked Data-silo's beoordeeld als 4-sterren Linked Data. De volgende stappen in deze sectie verbeteren deze beoordeling.</p>
 </blockquote>
 <p>Door middel van een SPARQL endpoint kan er nu een federatieve query gemaakt worden die gegevens uit meerder endpoints raadpleegt. Om dit te kunnen doen, moet de gebruiker echter begrijpen waar de overlappingen bestaan tussen verschillende datasets, d.w.z. hoe de informatie die zich in deze zich bevindt moet worden verbonden om de informatie over verschillende endpoints te kunnen opvragen.</p>
-<h4 id="stap-3-formele-verbinding-van-registers">Stap 3. Formele Verbinding van Registers</h4>
+<h4 id="stap-3-toevoegen-van-context-binnen-registraties">Stap 3. Toevoegen van Context Binnen Registraties</h4>
 <p>Om precies te weten wat de data betekent en waar evt een overlap te vinden is die in meerdere registers aanwezig is, kan de data verrijkt worden met een context. Elk data element (of stuk instantie data) kan gekoppeld worden aan een linked data klasse (bv. een <code>owl:Class</code>) die o.a beschrijvingen, labels (in meerdere talen), en overige informatie kan bevatten. Door deze extra context is de data beter te begrijpen en makkelijker te bevragen door de gebruikers. </p>
 <table>
 <thead>
@@ -1404,8 +1420,19 @@
 </tbody>
 </table>
 <p>De toevoeging van een dergelijke context verschijnt in de vorm van of een schema dat is gedefinieerd met behulp van Linked Data-standaarden of in de vorm van een geformaliseerde ontologie. Dit laatste is alleen beschikbaar als de context formele logica omvat (bijvoorbeeld het gebruik van axioma's) die <a href="https://www.ontotext.com/knowledgehub/fundamentals/what-is-inference/">inferencing</a> ondersteunt.</p>
-<p>Met de toevoeging van een schema of ontologie aan de instantiegegevens kan de overlap tussen verschillende registers voor gebruikers gemakkelijker te identificeren zijn. Dit kan gebaseerd zijn op het gebruik van dezelfde klassen of attributen in meerdere registers (bijvoorbeeld de aanwezigheid van BSN-nummers in zowel de BRK als de BRP) of op de mogelijkheid om geospatiale overlap tussen objecten uit te voeren. Dit laatste is vaak nuttig bij het identificeren van de relatie tussen georuimtelijke registers zoals de BAG en de BRK, waar de overlap tussen gebouwen en percelen voor veel gebruikers nuttig is.</p>
-<p>Omdat deze overlappingen of schijnbaar gedeelde kenmerken nog niet als zodanig tussen registers zijn geformaliseerd, moeten deze door gebruikers worden geïdentificeerd en onderzocht voordat een federatieve query kan worden uitgevoerd. De relatie met andere registers is dus nog niet optimaal in deze situatie. </p>
+<p>Met de toevoeging van een schema of ontologie aan de instantiegegevens kan de overlap tussen verschillende registers voor gebruikers gemakkelijker te identificeren zijn. Dit kan gebaseerd zijn op het gebruik van dezelfde klassen of attributen in meerdere registers (bijvoorbeeld de aanwezigheid van BSN-nummers in zowel de BRK als de BRP) of op de mogelijkheid om geospatiale overlap tussen objecten uit te voeren. Dit laatste is vaak nuttig bij het identificeren van de relatie tussen georuimtelijke registers zoals de BAG en de BRK, waar de overlap tussen gebouwen en percelen voor veel gebruikers nuttig is. </p>
+<p>Omdat deze overlappingen of schijnbaar gedeelde kenmerken nog niet als zodanig tussen registers zijn geformaliseerd, moeten deze door gebruikers worden geïdentificeerd en onderzocht voordat een federatieve query kan worden uitgevoerd. De relatie met andere registers is dus nog niet optimaal in deze situatie. Het scala aan opties dat beschikbaar is voor gebruikers en de rol van de informatiekundige kern bij de ondersteuning hiervan worden in de volgende stap besproken.</p>
+<h4 id="stap-4-formele-verbinding-van-registraties">Stap 4. (Formele) Verbinding van Registraties</h4>
+<p>Het concept van een informatiekundige kern heeft affiniteit met linked data technologies vanwege de inherente ondersteuning van laatstgenoemde voor het koppelen van gedistribueerde gegevensbronnen. Wel is het zo dat linked data meerdere mogelijkheden biedt voor het ondersteunen van federatieve bevragingen. </p>
+<ol>
+<li>
+<p><strong>Veldmatching op Basis van Koppelementen:</strong> Het is bijvoorbeeld goed mogelijk om meerdere bronnen federatief te bevragen zonder dat er een expliciete koppeling is tussen de bronnen. Wel moet er een gemeenschappelijke data-element zijn om te kunnen verbinden: denk hierbij aan naam, adres, bagID, KVK nummer, BSN, etc. Om dit te implementeren moeten instantiegegevens op basis van deze velden worden gematcht (gebaseerd op de implementatie van een SPARQL-query), maar dit vereist dat de gebruiker van de gegevens deze velden kan identificeren.</p>
+</li>
+<li>
+<p><strong>Directe Links:</strong> Zodra de velden zijn gematcht, kan een gebruiker besluiten de relaties tussen instantiegegevens te formaliseren. Door bijvoorbeeld de datasets te voorzien van extra context op basis van gestandardiseerde ontologieën zoals RDFS, OWL en SHACL kunnen de bestaande datasets verrijkt kunnen worden met nieuwe data (relaties tussen instantie data). Deze nieuwe data kan ook leiden tot koppelingen tussen de gedistribueerde gegevensbronnen. Om gebruikers te ondersteunen bij het bevragen van gegevens uit verschillende bronnen, kunnen dataaanbieders ervoor kiezen deze relaties zelf te materialiseren door deze relaties op dezelfde manier te materialiseren. Dit vereist uiteraard de ontwikkeling van overeenkomsten tussen dataproviders waar federatieve data bestaan, maar leidt tot meer zekerheid in deze gematerialiseerde relaties dan wanneer een gebruiker deze zelf moet implementeren. Zodra er een directe koppeling is gemaakt, is het eenvoudiger om federatief bevragen te stellen. </p>
+</li>
+</ol>
+<p>Met de eerste van deze twee opties kunnen dataproviders hun data eenvoudigweg beschikbaar stellen als linked data en kunnen gebruikers de relaties tussen data binnen en buiten hun datasets onderzoeken en zelf definiëren. Dan kunnen data providers gewoon stappen 1 tot en met 3 volgen en daarbij het laten. Het concept van de informatiekundige kern wil deze relaties echter explicieter beschikbaar maken voor gebruikers en daarmee de directe koppeling van informatie ondersteunen. Bij deze tweede optie is er ook een reeks opties met verschillende niveaus van betrokkenheid, hoe deze relaties explicieter kunnen worden gemaakt.</p>
 <p>Idealiter zorg je voor formele koppelelementen die de registers adopteren en onderhouden. De geformaliseerde koppelelementen komen in twee vormen voor, of in de vorm van een <strong>upperontologie</strong>, of in de vorm van <strong>gematerialiseerde relaties</strong> tussen instantiegegevens over verschillende registers heen. Beide worden hieronder beschreven en sluit elkaar niet uit.</p>
 <blockquote>
 <p><strong>5 Star Linked Data:</strong> Wanneer één of beide van deze opties tussen basisregistraties worden geïntroduceerd, kunnen deze registers nu worden beoordeeld als 5-sterren linked data.</p>
@@ -1498,7 +1525,7 @@ kern'</a>, definieert klassen en/of attributen die worden gedeeld tussen verschi
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../linkeddata/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Linked Data">
+          <a href="../informatiemodel/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Informatiemodel">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1508,20 +1535,20 @@ kern'</a>, definieert klassen en/of attributen die worden gedeeld tussen verschi
                 Vorige
               </span>
               <div class="md-ellipsis">
-                Linked Data
+                Informatiemodel
               </div>
             </div>
           </a>
         
         
           
-          <a href="../informatiemodel/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Informatiemodel">
+          <a href="../testopstelling/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Testopstelling">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Volgende
               </span>
               <div class="md-ellipsis">
-                Informatiemodel
+                Testopstelling
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1558,7 +1585,7 @@ kern'</a>, definieert klassen en/of attributen die worden gedeeld tussen verschi
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
     
   </body>
