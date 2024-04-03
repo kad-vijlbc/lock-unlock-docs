@@ -14,7 +14,7 @@ Hoewel het doel van dit project vooral lag op [autorisatie als Linked
 Data](./autorisatie-als-linkeddata/index.md), is een deel van de aandacht ook gegaan naar
 [federatieve bevraging](./federatieve-bevraging/index.md). Dat schetst namelijk de context waarin
 [afscherming](./afscherming/index.md) zou moeten plaatsvinden. Uiteraard hebben we ook beproefd in
-hoeverre autorisatie als Linked Data mogelijk en haalbaar is. Hierover hebben we apart een
+hoeverre autorisatie als Linked Data mogelijk en haalbaar is via prototype implementaties met 2 verschillende aanpakken. Over de voor- en na-delen van de 2 aanpkken hebben we apart een korte
 [evaluatie](./autorisatie-als-linkeddata/evaluatie.md) geschreven. De conclusies volgen hier:
 
 :warning: Zie ook [disclaimer](#disclaimer).
@@ -27,7 +27,7 @@ href="#afscherming-van-linked-data-is-mogelijk">Afschermen van Linked Data is mo
 Het is mogelijk om fijnmazig autorisatieregels declaratief te modelleren op basis van een
 autorisatie ontologie voor federatieve bevragingen op basis van Linked Data. We hebben dit aan
 kunnen tonen in onze [demonstrators](./autorisatie-als-linkeddata/demonstrators/index.md), waarin we
-een eerste toepassing van een door ons ontwikkelde autorisatie ontologie hebben uitgewerkt.
+een eerste toepassing van een door ons ontwikkelde autorisatie ontologie hebben uitgewerkt. Hieruit blijkt dat het mogelijk is om een sparql-endpoint op te zetten die alleen informatie teruggeeft waarvoor je de benodigde rechten hebt.
 
 **<a id="declaratieve-autorisatieregels-als-linked-data"
 href="#declaratieve-autorisatieregels-als-linked-data">Declaratieve autorisatieregels als Linked
@@ -38,13 +38,10 @@ een bepaalde gebruikersgroep wordt toegang verleend voor een specifiek data-sche
 ontologie. De regels die gelden kunnen zeer fijnmazig zijn en de verschillende
 [afschermingspatronen](./afscherming/afschermingspatronen.md) bevatten. We hebben in onze
 demonstrators aangetoond dat [verticale en horizontale
-subsets](./afscherming/afschermingspatronen.md#toegang-tot-een-subset) mogelijk zijn. De
-[richting](./afscherming/afschermingspatronen.md#toegang-tot-data-in-een-bepaalde-richting) is
-moeilijker en zijn we onvoldoende aan toegekomen om te kunnen zeggen dat dat echt werkt. Is het
-mogelijk? Wij denken van wel.
+subsets](./afscherming/afschermingspatronen.md#toegang-tot-een-subset) mogelijk zijn. Afscherming van een zoek [richting](./afscherming/afschermingspatronen.md#toegang-tot-data-in-een-bepaalde-richting) is helaas niet beproefd. Is het mogelijk? Wij denken van wel.
 
 De autorisatieregels zijn _declaratief_. Dat betekent dat de gewenste toegang of juist afscherming
-gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten een de
+gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten aan een
 'engine' die zorgdraagt voor de afscherming.
 
 Dit houdt ook in dat autorisatieregels data is `#data-gedreven`. Dit betekent:
@@ -54,6 +51,7 @@ Dit houdt ook in dat autorisatieregels data is `#data-gedreven`. Dit betekent:
 - dat de autorisatieregels kunnen worden opgesteld en gedefinieerd onafhankelijk van de software
   (engine) waarin de regels worden afgedwongen
 - dat de autorisatieregels als _knowledge graph_ toegankelijk zijn
+- dat de autorisatieregels opgesteld kunnen worden gebruikmakende van de Linked Data schema's
 
 **<a id="autorisatie-ontologie-voor-standaardisatie"
 href="#autorisatie-ontologie-voor-standaardisatie">Autorisatie ontologie voor standaardisatie</a>**
@@ -87,15 +85,15 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
   afscherming via configuratie van deze patronen
 
 - De PoC implementaties laten zien dat veel autorisatie patronen makkelijk implementeerbaar en
-  haalbaar zijn. Deze implementaties zijn niet bruikbaar voor productie en evt problemen mbt
-  veiligheid en schaalbaarheid zijn niet onderzocht. Zie ook [disclaimer](#disclaimer).
+  haalbaar zijn. (Deze implementaties zijn niet bruikbaar voor productie en evt problemen mbt
+  veiligheid en schaalbaarheid zijn niet onderzocht. Zie ook [disclaimer](#disclaimer).)
 
 - Fictieve data van gekoppelde registers in Linked Data is makkelijk te realiseren. 
 
 - Rewritten queries uit de [implementatie
   rewrite](./autorisatie-als-linkeddata/implementaties/rewrite.md) zijn complexer dan de orginele
   queries. Dat geeft extra belasting bij de uitvoering van de query. Daarom zijn optimale
-  queryplannen noodzakelijk zijn om prestatie (performance) redenenen. Alleen triplestore met goede
+  queryplannen noodzakelijk zijn om prestatie (performance) redenenen. Alleen triplestores met goede
   optimalisatie van queryplannen kunnen deze queries performant uitvoeren.
 
 - Het afschermen van gegevens zo dicht mogelijk bij de triplestore biedt grotere zekerheid dan
@@ -124,11 +122,10 @@ bevragen. In applicaties die ondersteuning hebben voor Linked Data en SPARQL is 
 rijke en federatieve functionaliteit te ontwikkelen.
 
 **<a id="open-source-triples-stores-maken-testopstelling-gemakkelijk"
-href="#open-source-triples-stores-maken-testopstelling-gemakkelijk">Open Source triple stores maken
+href="#open-source-triples-stores-maken-testopstelling-gemakkelijk">Open Source triplestores maken
 testopstelling gemakkelijk</a>**
 
-Door gebruik te maken van Open Source producten voor Linked Data databases, zogenaamde triple
-stores, is het opbouwen van een testopstelling relatief gemakkelijk. In onze cloud omgeving wordt
+Door gebruik te maken van Open Source producten voor Linked Data databases, zogenaamde triplestores, is het opbouwen van een testopstelling relatief gemakkelijk. In onze cloud omgeving wordt
 gebruik gemaakt van Cloud Native tools en daarvoor was nog geen standaard deployment script
 beschikbaar. Tegelijk was het niet extreem moeilijk om, met kennis van zaken natuurlijk, deze te
 ontwikkelen en gebruiken voor de testopstelling.
@@ -158,15 +155,14 @@ aanbeveling [Meer onderzoek naar performance federatieve bevragingen](#aanbeveli
 href="#duurzame-koppeling-van-silos-vraagt-om-expliciet-ontwerp">Duurzame koppeling van silo's
 vraagt om een expliciet ontwerp</a>**
 
-Impliciet zijn registers koppelbaar. In alle gevallen zullen sleutels tussen registers / silo's op
+Impliciet zijn registers koppelbaar vanwege (impliciet) aanwezige koppelsleutels. In alle gevallen zullen sleutels tussen registers / silo's op
 elkaar moeten passen. Linked Data biedt daar standaard al enige constructen voor om in een query
 transformaties of iets dergelijks te doen. Dit is echter een punt oplossing en moet voor elke query
 opnieuw toegepast worden.
 
-Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te kunnen
-doen, dienen de schema's én de data goed gekoppeld te zijn. Ook voor Linked Data. Wel biedt Linked
-Data hier verschillende mogelijkheden voor. Zo is het mogelijk om een _upper ontology_ voor de
-registers af te spreken. Door adoptie van de upper ontologie kunnen relaties tussen de informatie
+Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te vergemakkelijken, dient minimaal dee data gekoppeld te zijn. Linked
+Data biedt hiervoor verschillende mogelijkheden. Een mogelijkheid is bijvoorbeeld om een _upper ontology_ voor de
+registers af te spreken. Door adoptie van deze upper-ontologie kunnen relaties tussen de informatie
 modellen maar ook relaties tussen de datasets toe gevoegd worden. 
 
 Zie ook [informatiekundige kern](./federatieve-bevraging/informatiekundigekern.md).
@@ -182,14 +178,13 @@ de mogelijkheden van Linked Data. Het succes en toepassen van deze technieken st
 met de adoptiegraad van Linked Data in het algemeen. Het vergroten van deze adoptie is daarom van
 belang. Hierbij Kun je vragen stellen zoals wat is het minimum noodzakelijke voor een registerhouder
 om data als Linked data te publiceren. Wat is de minimale infrastructuur hiervoor en hoe kan er snel
-en robuust Linked Data gecreeerd worden. 
+en robuust Linked Data gecreëerd worden.   
 
 **<a id="autorisatie-ontologie-verder-uitwerken"
 href="#autorisatie-ontologie-verder-uitwerken">Autorisatie ontologie verder uitwerken</a>**
 
 De [Authorisation Ontology](./opleveringen.md#authorisation-ontology) waar in dit project in eerste
-opzet van is gedaan, dient verder te worden uitgewerkt. Het mooiste zou zijn als deze tot een
-standaard wordt verheven natuurlijk. Dat betekent ook dat vendors van triple stores deze standaard
+opzet van is gedaan, dient verder te worden uitgewerkt. Idealiter ontstaat er een geadopteerde standaard autorisatie ontologie. Dat betekent ook dat vendors van triple stores deze standaard
 kunnen implementeren zodat het écht gaat werken. Federatief!
 
 Het is daarin van belang dat ook [alternatieven](./achtergrond/auth-alternatieven.md) goed

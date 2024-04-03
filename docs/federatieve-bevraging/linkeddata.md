@@ -51,7 +51,7 @@ Er zijn dus een aantal building blocks voor het publiceren van gegevens als Link
 
 1. Defineer data objects (resources) als HTTP-URIs
 2. Gebruik de RDF framework om URIs te beschrijven en meer informatie vast te leggen
-3. Definieer metadata (e.g. ontologien met formele logica) om de verbindingen tussen relaties vast
+3. Beschrijf de data met data, eventueel op basis van ontologieën met formele logica
    te leggen
 4. SPARQL beschikbaar maken en gebruiken voor bevragingen
 

@@ -44,7 +44,7 @@ federatieve bevraging.
 
 - [REST vs GraphQL vs SPARQL](./apis.md)
 - [Waarom Linked Data?](./linkeddata.md)
-- [Informatiekundigekern](./informatiekundigekern.md)
 - [Informatiemodel](./informatiemodel.md)
+- [Informatiekundigekern](./informatiekundigekern.md)
 - [Testopstelling](./testopstelling.md)
 - [Demonstrator](./demonstrator.md)

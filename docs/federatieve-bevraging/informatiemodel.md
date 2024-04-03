@@ -115,19 +115,11 @@ vinden](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=http
 ### Samenhang creëren
 
 De schemas en de data van de schemas zijn als silo's opgezet. Elk register publiceert zijn data en
-de bijbehorende context (schemas) op een eigen triplestore. 
-
-> NB: De bovenstaanden schemas worden hier niet gedefinieerd als ontologieën omdat ze geen axioma's
-> of geformaliseerde inferentie regels bevatten. Met de introductie van `owl:sameAs` vanaf nu,
-> kunnen we nu inferentie doen en nu wordt het informatie model een ontologie. Dit komt omdat deze
-> relatie aangeeft dat er enige conceptuele gelijkenis bestaat tussen individuen en dat informatie
-> kan worden afgeleid op basis van de aanwezigheid van deze relaties. 
-
-Om de verschillende schema's met elkaar te verbinden, wordt een upperontologie gedefinieerd die twee
-relaties omvat tussen klassen die in de schema's zijn gedefinieerd, `owl:sameAs` en een
-`ik:heeftUBO` relatie. In beide gevallen worden deze relaties gedefinieerd als onderdeel van een
-upper ontologie en gematerialiseerd in de data zelf om instanties met elkaar te verbinden (zie optie
-1 en 2 in [informatiekundigekern](informatiekundigekern.md)). 
+de bijbehorende context (schemas) op een eigen triplestore. Om de verschillende schema's met elkaar 
+te verbinden wordt twee relaties gedefinieerd tussen klassen die in de schema's zijn gedefinieerd, 
+`owl:sameAs` en een `ik:heeftUBO` relatie. In beide gevallen worden deze relaties gedefinieerd tussen 
+klassen die aanwezig zijn in de schema's en gematerialiseerd als relaties die instantiegegevens met elkaar verbinden. 
+Zie [optie 2 in informatiekundige kern](informatiekundigekern.md) voor meer informatie over gematerialiseerde relaties. 
 
 #### `owl:sameAs`
 
@@ -200,15 +192,19 @@ Door de `owl:sameAs` relatie (en bijbehorende inferentie) en `ik:heeftUBO` relat
 netwerk van samenhangende schema's. Dit kan natuurlijk als één schema gepresenteerd worden. Op basis
 van de implementatie van dit model als linked data kunnen een aantal conclusies en aanbeveilingen
 worden getrokken met betrekking tot de mogelijkheden om federatief bevragingen te ondersteunen. Zie
-[Conclusies en Aanbeveilingen](../conclusies.md).
+[Conclusies en Aanbeveilingen](../conclusies.md). 
 
 Hieronder een screenshot van de visualisatie direct uit de data van de schema's. Deze visualisatie
 is ook live te bekijken via [deze
-link](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema).
+link](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema). In dit samengesteld model zijn verschillende 
+kleuren gebruikt om de individuele silo's (weer) te
+onderscheiden.
 
 |![linked registers](images/InformatieModel.png)|
 | :--: |
 |*Hèt Informatie Model voor Lock-Unlock*|
 
-In dit samengesteld model zijn verschillende kleuren gebruikt om de individuele silo's (weer) te
-onderscheiden.
+Onze ervaring met het koppelen van deze schema's en de onderliggende gegevens stelde ons ook in staat de mogelijkheden te verkennen 
+voor het ontwerp en de implementatie van een informatiekundige kern op basis van linked data technologieën. Dit onderzoeken we in de volgende sectie, 
+waarbij we slechts één optie voor implementatie bieden. Er zou verder onderzoek gedaan moeten worden naar andere methoden voor de 
+introductie van de informatiekundige kern.
