@@ -11,14 +11,14 @@
         <link rel="canonical" href="https://kadaster-labs.github.io/lock-unlock-docs/v0.91/federatieve-bevraging/informatiemodel/">
       
       
-        <link rel="prev" href="../informatiekundigekern/">
+        <link rel="prev" href="../linkeddata/">
       
       
-        <link rel="next" href="../testopstelling/">
+        <link rel="next" href="../informatiekundigekern/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -375,27 +375,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../informatiekundigekern/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Informatiekundige Kern
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -555,6 +534,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../informatiekundigekern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informatiekundige Kern
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1563,19 +1563,11 @@ vinden</a>.</p>
 </table>
 <h3 id="samenhang-creeren">Samenhang creëren</h3>
 <p>De schemas en de data van de schemas zijn als silo's opgezet. Elk register publiceert zijn data en
-de bijbehorende context (schemas) op een eigen triplestore. </p>
-<blockquote>
-<p>NB: De bovenstaanden schemas worden hier niet gedefinieerd als ontologieën omdat ze geen axioma's
-of geformaliseerde inferentie regels bevatten. Met de introductie van <code>owl:sameAs</code> vanaf nu,
-kunnen we nu inferentie doen en nu wordt het informatie model een ontologie. Dit komt omdat deze
-relatie aangeeft dat er enige conceptuele gelijkenis bestaat tussen individuen en dat informatie
-kan worden afgeleid op basis van de aanwezigheid van deze relaties. </p>
-</blockquote>
-<p>Om de verschillende schema's met elkaar te verbinden, wordt een upperontologie gedefinieerd die twee
-relaties omvat tussen klassen die in de schema's zijn gedefinieerd, <code>owl:sameAs</code> en een
-<code>ik:heeftUBO</code> relatie. In beide gevallen worden deze relaties gedefinieerd als onderdeel van een
-upper ontologie en gematerialiseerd in de data zelf om instanties met elkaar te verbinden (zie optie
-1 en 2 in <a href="../informatiekundigekern/">informatiekundigekern</a>). </p>
+de bijbehorende context (schemas) op een eigen triplestore. Om de verschillende schema's met elkaar 
+te verbinden wordt twee relaties gedefinieerd tussen klassen die in de schema's zijn gedefinieerd, 
+<code>owl:sameAs</code> en een <code>ik:heeftUBO</code> relatie. In beide gevallen worden deze relaties gedefinieerd tussen 
+klassen die aanwezig zijn in de schema's en gematerialiseerd als relaties die instantiegegevens met elkaar verbinden. 
+Zie <a href="../informatiekundigekern/">optie 2 in informatiekundige kern</a> voor meer informatie over gematerialiseerde relaties. </p>
 <h4 id="owlsameas"><code>owl:sameAs</code></h4>
 <p>Door middel van <code>owl:sameAs</code> relaties kunnen individuals in Linked Data gelijk verklaard worden over
 verschillende silo's heen. Oftewel een linked data resource (element) dat leeft in één register
@@ -1666,10 +1658,12 @@ iteraties van het model kunnen worden geïntroduceerd.</p>
 netwerk van samenhangende schema's. Dit kan natuurlijk als één schema gepresenteerd worden. Op basis
 van de implementatie van dit model als linked data kunnen een aantal conclusies en aanbeveilingen
 worden getrokken met betrekking tot de mogelijkheden om federatief bevragingen te ondersteunen. Zie
-<a href="../../conclusies/">Conclusies en Aanbeveilingen</a>.</p>
+<a href="../../conclusies/">Conclusies en Aanbeveilingen</a>. </p>
 <p>Hieronder een screenshot van de visualisatie direct uit de data van de schema's. Deze visualisatie
 is ook live te bekijken via <a href="https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema">deze
-link</a>.</p>
+link</a>. In dit samengesteld model zijn verschillende 
+kleuren gebruikt om de individuele silo's (weer) te
+onderscheiden.</p>
 <table>
 <thead>
 <tr>
@@ -1682,8 +1676,10 @@ link</a>.</p>
 </tr>
 </tbody>
 </table>
-<p>In dit samengesteld model zijn verschillende kleuren gebruikt om de individuele silo's (weer) te
-onderscheiden.</p>
+<p>Onze ervaring met het koppelen van deze schema's en de onderliggende gegevens stelde ons ook in staat de mogelijkheden te verkennen 
+voor het ontwerp en de implementatie van een informatiekundige kern op basis van linked data technologieën. Dit onderzoeken we in de volgende sectie, 
+waarbij we slechts één optie voor implementatie bieden. Er zou verder onderzoek gedaan moeten worden naar andere methoden voor de 
+introductie van de informatiekundige kern.</p>
 
 
 
@@ -1722,7 +1718,7 @@ onderscheiden.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../informatiekundigekern/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Informatiekundige Kern">
+          <a href="../linkeddata/" class="md-footer__link md-footer__link--prev" aria-label="Vorige: Linked Data">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1732,20 +1728,20 @@ onderscheiden.</p>
                 Vorige
               </span>
               <div class="md-ellipsis">
-                Informatiekundige Kern
+                Linked Data
               </div>
             </div>
           </a>
         
         
           
-          <a href="../testopstelling/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Testopstelling">
+          <a href="../informatiekundigekern/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Informatiekundige Kern">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Volgende
               </span>
               <div class="md-ellipsis">
-                Testopstelling
+                Informatiekundige Kern
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1782,7 +1778,7 @@ onderscheiden.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
     
   </body>

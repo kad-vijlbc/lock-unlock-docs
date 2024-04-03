@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -376,11 +376,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../federatieve-bevraging/informatiekundigekern/" class="md-nav__link">
+      <a href="../federatieve-bevraging/informatiemodel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Informatiekundige Kern
+    Informatiemodel
   </span>
   
 
@@ -397,11 +397,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../federatieve-bevraging/informatiemodel/" class="md-nav__link">
+      <a href="../federatieve-bevraging/informatiekundigekern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Informatiemodel
+    Informatiekundige Kern
   </span>
   
 
@@ -1329,7 +1329,7 @@ een verkenning om de (on)mogelijkheden te onderzoeken en te testen.</p>
 Data</a>, is een deel van de aandacht ook gegaan naar
 <a href="../federatieve-bevraging/">federatieve bevraging</a>. Dat schetst namelijk de context waarin
 <a href="../afscherming/">afscherming</a> zou moeten plaatsvinden. Uiteraard hebben we ook beproefd in
-hoeverre autorisatie als Linked Data mogelijk en haalbaar is. Hierover hebben we apart een
+hoeverre autorisatie als Linked Data mogelijk en haalbaar is via prototype implementaties met 2 verschillende aanpakken. Over de voor- en na-delen van de 2 aanpkken hebben we apart een korte
 <a href="../autorisatie-als-linkeddata/evaluatie/">evaluatie</a> geschreven. De conclusies volgen hier:</p>
 <p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Zie ook <a href="#disclaimer">disclaimer</a>.</p>
 <h3 id="autorisatie-als-linked-data">Autorisatie als Linked Data</h3>
@@ -1338,7 +1338,7 @@ href="#afscherming-van-linked-data-is-mogelijk">Afschermen van Linked Data is mo
 <p>Het is mogelijk om fijnmazig autorisatieregels declaratief te modelleren op basis van een
 autorisatie ontologie voor federatieve bevragingen op basis van Linked Data. We hebben dit aan
 kunnen tonen in onze <a href="../autorisatie-als-linkeddata/demonstrators/">demonstrators</a>, waarin we
-een eerste toepassing van een door ons ontwikkelde autorisatie ontologie hebben uitgewerkt.</p>
+een eerste toepassing van een door ons ontwikkelde autorisatie ontologie hebben uitgewerkt. Hieruit blijkt dat het mogelijk is om een sparql-endpoint op te zetten die alleen informatie teruggeeft waarvoor je de benodigde rechten hebt.</p>
 <p><strong><a id="declaratieve-autorisatieregels-als-linked-data"
 href="#declaratieve-autorisatieregels-als-linked-data">Declaratieve autorisatieregels als Linked
 Data</a></strong></p>
@@ -1347,12 +1347,9 @@ een bepaalde gebruikersgroep wordt toegang verleend voor een specifiek data-sche
 ontologie. De regels die gelden kunnen zeer fijnmazig zijn en de verschillende
 <a href="../afscherming/afschermingspatronen/">afschermingspatronen</a> bevatten. We hebben in onze
 demonstrators aangetoond dat <a href="../afscherming/afschermingspatronen/#toegang-tot-een-subset">verticale en horizontale
-subsets</a> mogelijk zijn. De
-<a href="../afscherming/afschermingspatronen/#toegang-tot-data-in-een-bepaalde-richting">richting</a> is
-moeilijker en zijn we onvoldoende aan toegekomen om te kunnen zeggen dat dat echt werkt. Is het
-mogelijk? Wij denken van wel.</p>
+subsets</a> mogelijk zijn. Afscherming van een zoek <a href="../afscherming/afschermingspatronen/#toegang-tot-data-in-een-bepaalde-richting">richting</a> is helaas niet beproefd. Is het mogelijk? Wij denken van wel.</p>
 <p>De autorisatieregels zijn <em>declaratief</em>. Dat betekent dat de gewenste toegang of juist afscherming
-gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten een de
+gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten aan een
 'engine' die zorgdraagt voor de afscherming.</p>
 <p>Dit houdt ook in dat autorisatieregels data is <code>#data-gedreven</code>. Dit betekent:</p>
 <ul>
@@ -1361,6 +1358,7 @@ gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt ov
 <li>dat de autorisatieregels kunnen worden opgesteld en gedefinieerd onafhankelijk van de software
   (engine) waarin de regels worden afgedwongen</li>
 <li>dat de autorisatieregels als <em>knowledge graph</em> toegankelijk zijn</li>
+<li>dat de autorisatieregels opgesteld kunnen worden gebruikmakende van de Linked Data schema's</li>
 </ul>
 <p><strong><a id="autorisatie-ontologie-voor-standaardisatie"
 href="#autorisatie-ontologie-voor-standaardisatie">Autorisatie ontologie voor standaardisatie</a></strong></p>
@@ -1392,8 +1390,8 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 </li>
 <li>
 <p>De PoC implementaties laten zien dat veel autorisatie patronen makkelijk implementeerbaar en
-  haalbaar zijn. Deze implementaties zijn niet bruikbaar voor productie en evt problemen mbt
-  veiligheid en schaalbaarheid zijn niet onderzocht. Zie ook <a href="#disclaimer">disclaimer</a>.</p>
+  haalbaar zijn. (Deze implementaties zijn niet bruikbaar voor productie en evt problemen mbt
+  veiligheid en schaalbaarheid zijn niet onderzocht. Zie ook <a href="#disclaimer">disclaimer</a>.)</p>
 </li>
 <li>
 <p>Fictieve data van gekoppelde registers in Linked Data is makkelijk te realiseren. </p>
@@ -1402,7 +1400,7 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 <p>Rewritten queries uit de <a href="../autorisatie-als-linkeddata/implementaties/rewrite/">implementatie
   rewrite</a> zijn complexer dan de orginele
   queries. Dat geeft extra belasting bij de uitvoering van de query. Daarom zijn optimale
-  queryplannen noodzakelijk zijn om prestatie (performance) redenenen. Alleen triplestore met goede
+  queryplannen noodzakelijk zijn om prestatie (performance) redenenen. Alleen triplestores met goede
   optimalisatie van queryplannen kunnen deze queries performant uitvoeren.</p>
 </li>
 <li>
@@ -1430,10 +1428,9 @@ te schrijven die uitvoerbaar is. Daarmee is Linked Data van nature geschikt voor
 bevragen. In applicaties die ondersteuning hebben voor Linked Data en SPARQL is het eenvoudig om
 rijke en federatieve functionaliteit te ontwikkelen.</p>
 <p><strong><a id="open-source-triples-stores-maken-testopstelling-gemakkelijk"
-href="#open-source-triples-stores-maken-testopstelling-gemakkelijk">Open Source triple stores maken
+href="#open-source-triples-stores-maken-testopstelling-gemakkelijk">Open Source triplestores maken
 testopstelling gemakkelijk</a></strong></p>
-<p>Door gebruik te maken van Open Source producten voor Linked Data databases, zogenaamde triple
-stores, is het opbouwen van een testopstelling relatief gemakkelijk. In onze cloud omgeving wordt
+<p>Door gebruik te maken van Open Source producten voor Linked Data databases, zogenaamde triplestores, is het opbouwen van een testopstelling relatief gemakkelijk. In onze cloud omgeving wordt
 gebruik gemaakt van Cloud Native tools en daarvoor was nog geen standaard deployment script
 beschikbaar. Tegelijk was het niet extreem moeilijk om, met kennis van zaken natuurlijk, deze te
 ontwikkelen en gebruiken voor de testopstelling.</p>
@@ -1456,14 +1453,13 @@ aanbeveling <a href="#aanbevelingen">Meer onderzoek naar performance federatieve
 <p><strong><a id="duurzame-koppeling-van-silos-vraagt-om-expliciet-ontwerp"
 href="#duurzame-koppeling-van-silos-vraagt-om-expliciet-ontwerp">Duurzame koppeling van silo's
 vraagt om een expliciet ontwerp</a></strong></p>
-<p>Impliciet zijn registers koppelbaar. In alle gevallen zullen sleutels tussen registers / silo's op
+<p>Impliciet zijn registers koppelbaar vanwege (impliciet) aanwezige koppelsleutels. In alle gevallen zullen sleutels tussen registers / silo's op
 elkaar moeten passen. Linked Data biedt daar standaard al enige constructen voor om in een query
 transformaties of iets dergelijks te doen. Dit is echter een punt oplossing en moet voor elke query
 opnieuw toegepast worden.</p>
-<p>Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te kunnen
-doen, dienen de schema's én de data goed gekoppeld te zijn. Ook voor Linked Data. Wel biedt Linked
-Data hier verschillende mogelijkheden voor. Zo is het mogelijk om een <em>upper ontology</em> voor de
-registers af te spreken. Door adoptie van de upper ontologie kunnen relaties tussen de informatie
+<p>Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te vergemakkelijken, dient minimaal dee data gekoppeld te zijn. Linked
+Data biedt hiervoor verschillende mogelijkheden. Een mogelijkheid is bijvoorbeeld om een <em>upper ontology</em> voor de
+registers af te spreken. Door adoptie van deze upper-ontologie kunnen relaties tussen de informatie
 modellen maar ook relaties tussen de datasets toe gevoegd worden. </p>
 <p>Zie ook <a href="../federatieve-bevraging/informatiekundigekern/">informatiekundige kern</a>.</p>
 <h2 id="aanbevelingen">Aanbevelingen</h2>
@@ -1475,12 +1471,11 @@ de mogelijkheden van Linked Data. Het succes en toepassen van deze technieken st
 met de adoptiegraad van Linked Data in het algemeen. Het vergroten van deze adoptie is daarom van
 belang. Hierbij Kun je vragen stellen zoals wat is het minimum noodzakelijke voor een registerhouder
 om data als Linked data te publiceren. Wat is de minimale infrastructuur hiervoor en hoe kan er snel
-en robuust Linked Data gecreeerd worden. </p>
+en robuust Linked Data gecreëerd worden.   </p>
 <p><strong><a id="autorisatie-ontologie-verder-uitwerken"
 href="#autorisatie-ontologie-verder-uitwerken">Autorisatie ontologie verder uitwerken</a></strong></p>
 <p>De <a href="../opleveringen/#authorisation-ontology">Authorisation Ontology</a> waar in dit project in eerste
-opzet van is gedaan, dient verder te worden uitgewerkt. Het mooiste zou zijn als deze tot een
-standaard wordt verheven natuurlijk. Dat betekent ook dat vendors van triple stores deze standaard
+opzet van is gedaan, dient verder te worden uitgewerkt. Idealiter ontstaat er een geadopteerde standaard autorisatie ontologie. Dat betekent ook dat vendors van triple stores deze standaard
 kunnen implementeren zodat het écht gaat werken. Federatief!</p>
 <p>Het is daarin van belang dat ook <a href="../achtergrond/auth-alternatieven/">alternatieven</a> goed
 geanalyseerd en overwogen worden. In dit onderzoek hebben we daar wel kennis van genomen, maar zijn
@@ -1655,7 +1650,7 @@ productie ... ongeschikt! <img alt="⚠" class="twemoji" src="https://cdn.jsdeli
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
     
   </body>
