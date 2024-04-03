@@ -6,7 +6,7 @@ Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te
 waarin informatie afgeschermd dient te worden. Aangezien het heel handig is om data in een context
 te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de
 registers nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Deze pagina
-beschrijft het maken van de schema's die relevant zijn voor dit project en de pagina[Testopstelling
+beschrijft het maken van de schema's die relevant zijn voor dit project en de pagina [Testopstelling
 ](./testopstelling.md) beschrijft het maken van de bijbehorende datasets. 
 
 Onderdeel van de ontwikkeling van het informatiemodel en de testdata was het formaliseren van
