@@ -13,6 +13,11 @@ Autorisatie is het proces waarbij een gebruiker rechten (of privileges) verkrijg
 er afgeschermde data. Per gebruiker of rol kan de afscherming verschillen. Oftewel per rol of
 gebruiker zijn de privileges tot data verschillend.
 
+### Axioma
+
+Een axioma is in (de wiskunde en) de logica een niet bewezen, maar als grondslag aanvaarde bewering
+- bron <a href="https://nl.wikipedia.org/wiki/Axioma" target="_blank">wikipedia</a>.
+
 ### Dataset
 
 Een collectie van bij elkaar horende gegevens. Dat kan bestaan uit een enkele tabel, maar ook uit
@@ -35,6 +40,17 @@ een deel van een dataset, kan ook een deel van een graph aangeduid worden met **
 
 Dit is vooral jargon wanneer de data [Linked Data](#linked-data) betreft. In geval van meer
 traditionele vormen als REST API's en databases wordt over [dataset](#dataset)s gesproken.
+
+### Inferentie
+
+Inferentie gaat over het afleiden of gevolgtrekking van nieuwe kennis uit bestaande kennis en
+[axioma](#axioma)'s. In Linked Data is dit een bekend begrip.
+
+> Inference is the derivation of new knowledge from existing knowledge and axioms. In an RDF
+> database, inference is used for deducing further knowledge based on existing RDF data and a formal
+> set of inference rules. - bron: <a
+> href="https://www.ontotext.com/knowledgehub/fundamentals/what-is-inference/"
+> target="_blank">ontotext</a>.
 
 ### Linked Data
 
@@ -101,3 +117,20 @@ endpoint](#sparql-endpoint) aan.
 ### Uniform Resource Identifier 
 
 Een reeks tekens die wordt gebruikt om een bron op een computernetwerk te identificeren, waarvan het bekendste type het webadres of een URL is.
+
+### Upperontologie
+
+Een upperontologie, of upper ontology (EN), is een ontologie welke algemene termen bevat of termen
+die over meerdere domeinen bestaan. Andere woorden voor upperontologie zijn top-level ontologie,
+uppermodel of foundation ontology.
+
+> _In information science, an **upper ontology** (also known as a top-level ontology, upper model,
+> or foundation ontology) is an ontology (in the sense used in information science) that consists of
+> very general terms (such as "object", "property", "relation") that are common across all domains.
+> An important function of an upper ontology is to support broad semantic interoperability among a
+> large number of domain-specific ontologies by providing a common starting point for the
+> formulation of definitions. Terms in the domain ontology are ranked under the terms in the upper
+> ontology, e.g., the upper ontology classes are superclasses or supersets of all the classes in the
+> domain ontologies._
+> <br>
+> bron: [wikipedia](https://en.wikipedia.org/wiki/Upper_ontology)
