@@ -6,14 +6,14 @@ Linked Data gedachte. Hiermee is het mogelijk om een realistische situatie na te
 waarin informatie afgeschermd dient te worden. Aangezien het heel handig is om data in een context
 te plaatsen (denk aan data schema's) is er binnen dit project een set van schema's ontwikkeld die de
 registers nabootsen (versimpeld en fictief) en natuurlijk een bijbehorende dataset. Deze pagina
-beschrijft het maken van de schema's die relevant zijn voor dit project en de [volgende
-sectie](./testopstelling.md) beschrijft het maken van gerelateerde dataset. 
+beschrijft het maken van de schema's die relevant zijn voor dit project en de pagina [Testopstelling
+](./testopstelling.md) beschrijft het maken van de bijbehorende datasets. 
 
 Onderdeel van de ontwikkeling van het informatiemodel en de testdata was het formaliseren van
 relaties tussen databronnen. Deze formalisering van relaties is een voorbeeld van een implementatie
 van een informatiekundige kern. Omdat deze relaties worden gedefinieerd tussen fictieve,
 vereenvoudigde databronnen die voor dit project zijn ontwikkeld, kunnen er geen conclusies worden
-getrokken over de geschiktheid van dit informatiemodel voor het Federatief Datastelsel en De
+getrokken over de geschiktheid van dit informatiemodel voor het Federatief Datastelsel en de
 Informatiekundige Kern in het algemeen. Dit informatiemodel laat alleen zien hoe relaties tussen
 linked data geformaliseerd kunnen worden en hoe federatieve bevraging mogelijk wordt gemaakt.
 
@@ -21,11 +21,11 @@ linked data geformaliseerd kunnen worden en hoe federatieve bevraging mogelijk w
 
 Om een federatieve bevraging te kunnen laten zien, is een testopstelling nodig. De eerste stap
 hiervoor is het maken van een conceptueel model om de benodigde gegevens voor ons doel te
-modelleren. Om een logisch begin te maken, hebben we daarvoor gekozen voor een situatie 'dicht bij
+modelleren. Om een logisch begin te maken, hebben we gekozen voor een situatie 'dicht bij
 huis'. Bij het Kadaster: De Basisregistratie Kadaster, afgekort de **BRK**. 
 
 Dit begint met het opnemen van percelen als object binnen een conceptueel model en vervolgens is het
-eigendom vastgesteld via `Tenaamstellingen` aan objecten personen. Met personen worden
+eigendom vastgesteld via `Tenaamstellingen` aan personen. Met personen worden
 `Rechtspersonen` bedoeld, wat een echt of 'natuurlijk' persoon kan zijn, maar ook een bedrijf. De
 juridische term is `Natuurlijk Persoon` voor echte mensen, welke geregistreerd zijn in de
 Basisregistratie Personen, afgekort met de **BRP**. Bedrijven zijn juridisch `Niet Natuurlijke
@@ -39,22 +39,22 @@ Instellingen.
 |*Informatie Model IMX-Geo als Linked Data*|
 
 Het vereenvoudigd conceptueel model zoals getoond in bovenstaande afbeelding is verder uitgewerkt in
-Linked Data als een (upper)ontologie voor een Lock-Unlock Informatiemodel gebaseerd op losstaande
+Linked Data als een (upper)ontologie voor een Lock-Unlock informatiemodel gebaseerd op losstaande
 schema's. Om de schema's en (upper)ontologie te modelleren is er gebruik gemaakt van de RDF/RDFS/OWL
 en SHACL standaarden. 
 
 ### Losstaande schema's per silo
 
 Voor elke silo is een schema gemaakt. Het betreft hier een (over)versimpeld schema dat grofweg de
-kern van het register bevat met als doel R&D voor de dit project te ondersteunen en tevens voor
+kern van het register bevat met als doel R&D voor dit project te ondersteunen en tevens 
 demonstratie mogelijkheden. Het schema voor elke silo heeft een eigen namespace en is relatief
 onafhankelijk gemodelleerd. Zo is voor Kadaster de NEN3610 een belangrijke upperontologie terwijl
 dit wellicht voor de BRP niet zo hoeft te zijn. Op deze manier onstaat er een situatie dat elk
-register een eigen ontologie heeft op basis van eigen upperontologieën.
+register een eigen ontologie heeft op basis van verschillende upperontologieën.
 
 #### IMX-Geo Schema
 
-Een openbare basis dataset is de Kadaster Knowledge Graph (KKG) wat gebruik maakt van de IMX-Geo
+Een openbare basis dataset is de Kadaster Knowledge Graph (KKG) wat gebruik maakt van het IMX-Geo
 schema. De KKG is aanwezig als Linked Data en bevat data van gebouwen en percelen liggende in
 registratieve ruimtes. Bijna alle gegevens zijn openbaar. De 'laatste koopsom' is een uitzondering
 hierop. Het deel van het informatiemodel dat nodig is voor Lock-Unlock wordt gevisualiseerd in de
@@ -81,7 +81,7 @@ vinden](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=http
 
 #### NHR Schema
 
-Een versimpeld model van de NHR is gemaakt. Inschrijvingen bevatten wat basis gegevens en zijn
+Een versimpeld model van de NHR is gemaakt. Inschrijvingen bevatten wat basisgegevens en zijn
 gekoppeld aan de openbare Registratieve Ruimtes. Hieronder is een diagram van het NHR schema te zien
 en deze is [hier live te
 vinden](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=https%3A%2F%2Fdata.federatief.datastelsel.nl%2Flock-unlock%2Fnhr%2Fdef%2F).
@@ -114,9 +114,9 @@ vinden](https://data.labs.kadaster.nl/lock-unlock/informatie-model/schema?f=http
 
 ### Samenhang creëren
 
-De schemas en de data van de schemas zijn als silo's opgezet. Elk register publiceert zijn data en
-de bijbehorende context (schemas) op een eigen triplestore. Om de verschillende schema's met elkaar 
-te verbinden wordt twee relaties gedefinieerd tussen klassen die in de schema's zijn gedefinieerd, 
+De schema's en de data van de schema's zijn als silo's opgezet. Elk register publiceert zijn data en
+de bijbehorende context (schema's) op een eigen triplestore. Om de verschillende schema's met elkaar 
+te verbinden worden twee relaties gedefinieerd tussen klassen die in de schema's zijn gedefinieerd, 
 `owl:sameAs` en een `ik:heeftUBO` relatie. In beide gevallen worden deze relaties gedefinieerd tussen 
 klassen die aanwezig zijn in de schema's en gematerialiseerd als relaties die instantiegegevens met elkaar verbinden. 
 Zie [optie 2 in informatiekundige kern](informatiekundigekern.md) voor meer informatie over gematerialiseerde relaties. 
@@ -132,12 +132,12 @@ hieronder).
 | :--: |
 |*Netwerk van schemas*|
 
-De bijbehorende inference is dat alle gegevens van de 2 gelijk gestelde resources gekopieerd mag
-worden. Stel individual 'A' is gelijk (owl:sameAs) aan individual 'B' dan kunnen alle relaties en
+Dit betekent dat alle gegevens van de twee gelijkgestelde resources gekopieerd kunnen worden.
+Stel individual 'A' is gelijk (owl:sameAs) aan individual 'B' dan kunnen alle relaties en
 kenmerken gekopieerd worden van 'A' naar 'B' en andersom. Hierdoor ontstaan netwerken van linked
-data over de registers heen en kan er daadwerkelijk "doorgebrowsed" worden van het ene register naar
+data over de registers heen en kan er daadwerkelijk genavigeerd worden van het ene register naar
 het andere. Ook SPARQL queries kunnen hier makkelijk gebruik van maken om zoekopdrachten over
-meerdere registers te uit te voeren. Ook in onze testopstelling maken we gebruik van `owl:sameAs` om
+meerdere registers  uit te voeren. Ook in onze testopstelling maken we gebruik van `owl:sameAs` om
 relaties te leggen naar andere registers zonder volledig afhankelijk te worden van deze registers.
 Dit is natuurlijk een manier om de relaties te leggen. Er zijn meerdere manieren om registerdata te
 koppelen via Linked Data.
@@ -154,7 +154,7 @@ koppelen via Linked Data.
 Een `owl:sameAs` relatie kan gelegd worden wanneer je weet dat deze 2 individuals ook daadwerkelijk
 gelijk zijn (refereert naar dezelfde persoon in de werkelijkheid). Vanuit Kadaster zal er
 waarschijnlijk akte informatie gebruikt worden zoals voornamen, achternaam, geboortedatum,
-geboortestad, etc om de juiste persoon in de BRP te vinden. De eigen adminstratie (BRK:Persoon)
+geboortestad, etc. om de juiste persoon in de BRP te vinden. De eigen adminstratie (BRK:Persoon)
 wordt dan gelijk verklaard met de gevonden (BRP:GeregistreerdPersoon). Ook voor relaties met de NHR
 werkt dit ongeveer hetzelfde. Akte informatie zal gebruikt worden om de juiste Inschrijving te
 vinden in de NHR om vervolgens weer de owl:sameAs relatie te leggen.
@@ -205,6 +205,7 @@ onderscheiden.
 |*Hèt Informatie Model voor Lock-Unlock*|
 
 Onze ervaring met het koppelen van deze schema's en de onderliggende gegevens stelde ons ook in staat de mogelijkheden te verkennen 
-voor het ontwerp en de implementatie van een informatiekundige kern op basis van linked data technologieën. Dit onderzoeken we in de volgende sectie, 
+voor het ontwerp en de implementatie van een informatiekundige kern op basis van linked data technologieën. Dit onderzoeken we in de [volgende sectie
+](./informatiekundigekern.md), 
 waarbij we slechts één optie voor implementatie bieden. Er zou verder onderzoek gedaan moeten worden naar andere methoden voor de 
 introductie van de informatiekundige kern.
