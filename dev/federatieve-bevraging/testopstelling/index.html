@@ -1237,14 +1237,15 @@
   <h1>Testopstelling</h1>
 
 <p>Om een federatieve bevraging te kunnen laten zien en om daarmee te kunnen onderzoeken, is een
-testopstelling nodig. De eerste stap in deze testopstelling was het creëren van het informatiemodel
-(zie vorige <a href="../informatiemodel/">sectie</a>) en de tweede stap is het creëren van testgegevens die
+testopstelling nodig. De eerste stap in deze testopstelling was het creëren van het
+<a href="../informatiemodel/">informatiemodel</a> en de tweede stap is het creëren van testgegevens die
 aansluiten bij dit model. Deze datasets zijn gebruikt binnen dit project voor R&amp;D en voor
 demonstratie doeleinden. </p>
 <p>Het gedefinieerde informatiemodel is een losjes uitgelijnde reeks schema's, aan elkaar gerelateerd
-door een upperontologie en gematerialiseerde relaties (zie <a href="../informatiekundigekern/">informatiekundige
-kern</a> en <a href="../informatiemodel/">informatiemodel</a>). Voor elk van deze
-schema's worden testgegevens gemaakt die als een silo zijn gepubliceerd.</p>
+door een <a href="../../achtergrond/glossary/#upperontologie">upperontologie</a> en gematerialiseerde relaties
+(zie <a href="../informatiemodel/">informatiemodel</a> en <a href="../informatiekundigekern/">informatiekundige
+kern</a>). Voor elk van deze schema's worden testgegevens gemaakt die als
+een silo zijn gepubliceerd.</p>
 <h2 id="testdata-genereren-in-silos">Testdata genereren in silo's</h2>
 <p>Testdata voor alle registraties bestaan in eigen silo's. Dit is geheel naar werkelijkheid en zo
 hebben we ook onze testgegevens ontworpen. </p>
@@ -1253,8 +1254,10 @@ gegenereerd dat deze in individuele silo's worden gepubliceerd, zijn relevante k
 de silo's opgenomen om ervoor te zorgen dat deze silo's op een federatieve manier kunnen worden
 bevraagd. Met deze opname hebben we ook het eerste doel van ons project bereikt (zie ook
 <a href="../demonstrator/">Demonstrator</a>).</p>
+<blockquote>
 <p>// TODO testdata generator code in <a href="https://github.com/kadaster-labs/lock-unlock-testdata">testdata
 repo</a> zetten? <img alt="🤔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f914.svg" title=":thinking_face:" /></p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -1271,7 +1274,7 @@ repo</a> zetten? <img alt="🤔" class="twemoji" src="https://cdn.jsdelivr.net/g
 href="https://github.com/kadaster-labs/lock-unlock-testdata" target="_blank">testdata repo</a>
 beschikbaar gesteld. Deze wordt automatisch geladen bij het opstarten van de containers van de
 <a href="../demonstrator/">demonstrator</a> (zie ook
-<a href="./#deployment">testopstelling#deployment</a>).</p>
+<a href="./#deployment">deployment</a>).</p>
 <h2 id="deployment">Deployment</h2>
 <p>Als Kadaster hebben wij de BRK data zelf (uiteraard) en IMX-Geo in huis. Ook de synthetische
 <a href="#testdata">testdata</a> van de BRK hosten we op onze infrastructuur. Hiervoor maken we gebruik van ons
