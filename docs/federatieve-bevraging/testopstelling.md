@@ -2,15 +2,16 @@
 title: Testopstelling
 ---
 Om een federatieve bevraging te kunnen laten zien en om daarmee te kunnen onderzoeken, is een
-testopstelling nodig. De eerste stap in deze testopstelling was het creëren van het informatiemodel
-(zie vorige [sectie](./informatiemodel.md)) en de tweede stap is het creëren van testgegevens die
+testopstelling nodig. De eerste stap in deze testopstelling was het creëren van het
+[informatiemodel](./informatiemodel.md) en de tweede stap is het creëren van testgegevens die
 aansluiten bij dit model. Deze datasets zijn gebruikt binnen dit project voor R&D en voor
 demonstratie doeleinden. 
 
 Het gedefinieerde informatiemodel is een losjes uitgelijnde reeks schema's, aan elkaar gerelateerd
-door een upperontologie en gematerialiseerde relaties (zie [informatiekundige
-kern](./informatiekundigekern.md) en [informatiemodel](./informatiemodel.md)). Voor elk van deze
-schema's worden testgegevens gemaakt die als een silo zijn gepubliceerd.
+door een [upperontologie](../achtergrond/glossary.md#upperontologie) en gematerialiseerde relaties
+(zie [informatiemodel](./informatiemodel.md) en [informatiekundige
+kern](./informatiekundigekern.md)). Voor elk van deze schema's worden testgegevens gemaakt die als
+een silo zijn gepubliceerd.
 
 ## Testdata genereren in silo's 
 
@@ -23,18 +24,18 @@ de silo's opgenomen om ervoor te zorgen dat deze silo's op een federatieve manie
 bevraagd. Met deze opname hebben we ook het eerste doel van ons project bereikt (zie ook
 [Demonstrator](./demonstrator.md)).
 
-// TODO testdata generator code in [testdata
+> // TODO testdata generator code in [testdata
 repo](https://github.com/kadaster-labs/lock-unlock-testdata) zetten? :thinking_face:
 
-|![Federatieve bevraging over silo's heen](images/testopstelling-silos.png)|
-| :--: |
-|*Federatieve bevraging over silo's heen*|
+| ![Federatieve bevraging over silo's heen](images/testopstelling-silos.png) |
+| :------------------------------------------------------------------------: |
+|                  *Federatieve bevraging over silo's heen*                  |
 
 De gegenereerde testgegevens worden in de <a
 href="https://github.com/kadaster-labs/lock-unlock-testdata" target="_blank">testdata repo</a>
 beschikbaar gesteld. Deze wordt automatisch geladen bij het opstarten van de containers van de
 [demonstrator](./demonstrator.md) (zie ook
-[testopstelling#deployment](./testopstelling.md#deployment)).
+[deployment](./testopstelling.md#deployment)).
 
 ## Deployment
 
