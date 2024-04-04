@@ -234,14 +234,25 @@ specifiek de header-sectie, kan interessante mogelijkheden bieden hierin.
 
 **<a id="informatiekundige-kern" href="#informatiekundige-kern">Informatiekundige kern</a>**
 
-Relaties tussen registers en silo's zijn geen eenvoudig probleem. Daar zijn oplossingen voor nodig
-en dienen expliciet ontworpen te worden. Daar horen afspraken bij om deze relatie te onthouden en
-wie deze verantwoordelijkheid krijgt.
+Relaties tussen registers en silo's is zonder afspraken nogal ingewikkeld. Deze relaties zijn ook
+niet altijd absoluut. Dat wil zeggen dat met 100% zekerheid gesteld kan worden dat een object van de
+ene silo gerelateerd is aan een object van de andere silo. Het helpt dus om relaties expliciet te
+ontwerpen.
 
-In technische zin is het mogelijk om de relaties meer nadruk en belang te geven. Een oplossing die
-Linked Data daarvoor kan bieden is een _upper ontology_. Daarmee zouden relaties gestandaardiseerd
-en geformaliseerd kunnen worden. Daarna zouden (gelijke) functionele zaken gestandardiseerd kunnen
-worden. Denk aan "ID"'s en versie beheer en meta-data van registers in Linked Data.
+In Linked Data zijn relaties en matching patronen gemakkelijker te leggen en te gebruiken dan
+niet-Linked Data oplossingen. Linked Data is standaard gebaseerd op informatiemodellen en
+ontologieën. Daarom zijn er met Linked Data vele mogelijkheden voor het dynamisch maken en leggen
+van relaties. Heel uitgebreide voorzieningen en afspraken zijn daarom minder noodzakelijk indien
+Linked Data gebruikt wordt.
+
+Het is (natuurlijk) wel mogelijk om de relaties méér nadruk en belang te geven. Oplossingen die
+Linked Data daarvoor kan bieden, zijn een _upper ontology_ en/of _gematerialiseerde relaties_.
+Daarmee zouden relaties gestandaardiseerd en geformaliseerd kunnen worden. Daarna zouden (gelijke)
+functionele zaken gestandardiseerd kunnen worden. Denk aan "ID"'s en versie beheer en meta-data van
+registers in Linked Data.
+
+Zie hiervoor ook onze uitgebreide beschrijving van deze concepten [informatiekundige
+kern](./federatieve-bevraging/informatiekundigekern.md).
 
 **<a id="meer-onderzoek-naar-performance-van-de-afscherming"
 href="#meer-onderzoek-naar-performance-van-de-afscherming">Meer onderzoek naar performance van de
