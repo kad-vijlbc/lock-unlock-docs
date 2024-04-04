@@ -29,11 +29,11 @@ de ontworpen demonstrators. Elk onderzoek naar de uitdagingen en randgevallen di
 op de complexiteit van het ontwerp van een informatiekundige kern vallen buiten de scope van dit
 project.
 
-### Federatief Datastelsel als Linked Data
+### Ontwerp Federatief Datastelsel met Linked Data
 
-Er zijn een aantal stappen die moeten worden genomen bij het ontwikkelen van een federatief
-datastelsel met behulp van Linked Data. Eén van deze stappen omvat de definitie van de
-informatiekundige kern. 
+Bij het ontwerp van een federatief datastelsel moet er rekening gehouden worden met losstaande
+registraties die op enige manier met elkaar te verbinden moeten zijn (interoperabel). Linked Data
+biedt daarin mogelijkheden en er zijn daar een aantal stappen in te beschrijven.
 
 #### Stap 1. Onafhankelijke Registraties 
  
@@ -226,7 +226,7 @@ wel het nodige vereisen. Linked Data technologie maakt de introductie van deze d
 tussen instantiegegevens eenvoudig en illustreert een duidelijk voordeel van het gebruik van deze
 technologie ter ondersteuning van federatieve bevragingen.
 
-### Ontwerp van de Informatiekundige Kern als Linked Data
+### Ontwerp van de Informatiekundige Kern met Linked Data
 
 Het ontwerp van de informatiekundige kern in Linked Data zou zowel de upperontologie moeten omvatten
 als ook afspraken over de gematerialiseerde relaties tussen (basis)registraties waar logische
