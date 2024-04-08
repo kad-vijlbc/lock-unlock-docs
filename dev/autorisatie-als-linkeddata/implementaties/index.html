@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#leeswijzer" class="md-skip">
-          Ga naar inhoud
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -1140,23 +1135,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#leeswijzer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Leeswijzer
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1180,32 +1158,44 @@ rechten heeft op welke gegevens in de dataset. Deze declaratieve data zou per de
 moeten zijn om een implementatie te voorzien van de juiste gegevens zodat ook daadwerkelijk de
 gegevens afgeschermd kunnen worden. Hoewel dit niet verder is uitgewerkt in dit project zou je deze
 autorisatie kennisgraaf ook moeten kunnen gebruiken om een set van API's, die per API zeer specifiek
-toegang geven tot een subset van de informatie, ook af te schermen. </p>
+toegang geven tot een subset van de informatie, af te schermen. </p>
 <p>Om SPARQL endpoints te beveiligen op basis van de kennisgraaf zijn er verschillende implementaties
 mogelijk. Hierbij is onderscheid te maken tussen een implementatie op basis van de (bron)code van
 een triplestore die SPARQL queries uitvoert en een implementatie die voor een bestaande triplestore
-gezet kan worden als losse service. </p>
-<p>Een implementatie op basis van broncode van een triplestore wordt al heel snel triplestore specifiek
-en is bijna onmogelijk voor closed source/ commerciële triplestores. In dit project is dan ook
-gekozen voor een aparte service die voor de data afscherming zorgt. </p>
+gezet kan worden als losse service. Het wijzigen van de broncode van een triplestore is nogal
+vergaand (hoewel na standaardisatie dat voor alle triplestores toegepast zou moeten worden; zie ook
+de <a href="../../conclusies/#implementaties-doorontwikkelen">aanbevelingen</a>).</p>
+<p>In dit project is gekozen voor het ontwikkelen van een extra filter in een open source service.
+Gekozen is voor het <a href="https://jena.apache.org/" target="_blank">Apache Jena</a> project als
+basis. Vervolgens hebben we daarin een <code>AutorisatieFilter</code> toegevoegd, waarvan de code ook weer als
+open source beschikbaar is gesteld; zie <a href="../../opleveringen/#secured-sparql-endpoints">opleveringen: Secured SPARQL
+Endpoints</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="PoC Autorisatie Filter" src="../images/PoC-AutorisatieFilter.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Proof-of-Concept AutorisatieFilter</em></td>
+</tr>
+</tbody>
+</table>
 <p>Binnen dit project zijn er 2 implementatie strategieën geïdentificeerd en verder beproefd op basis
-van een snelle PoC (Proof-of-Concept) implementatie: </p>
+van een snelle PoC (Proof-of-Concept) implementatie. Beide zijn gebaseerd op Apache Jena en het
+toevoegen van een extra filtering voor afscherming. De manier <em>waarop</em> die filtering wordt
+toegepast, zijn wel verschillende strategieën:</p>
 <ul>
 <li>
-<p><strong>SPARQL Rewrite:</strong> Bij deze strategie worden inkomende SPARQL queries herschreven zodat alle data
-  afschermingen toegevoegd worden aan de query. </p>
+<p><strong><a href="rewrite/">SPARQL Rewrite</a></strong>: Bij deze strategie worden inkomende SPARQL queries herschreven
+  zodat alle data afschermingen toegevoegd worden aan de query. </p>
 </li>
 <li>
-<p><strong>Subgraph:</strong> Hierbij wordt op basis van de autorisatie gegevens een subgraph gegenereerd van de
-  data waartoe de gebruiker toegang heeft. Vervolgens wordt de originele query op deze subset
-  uitgevoerd (ipv uitvoering op alle gegevens). </p>
+<p><strong><a href="subgraph/">Subgraph</a></strong>: Hierbij wordt op basis van de autorisatie gegevens een subgraph
+  gegenereerd van de data waartoe de gebruiker toegang heeft. Vervolgens wordt de originele query op
+  deze subset uitgevoerd (ipv uitvoering op alle gegevens). </p>
 </li>
-</ul>
-<h3 id="leeswijzer">Leeswijzer</h3>
-<p>Deze twee concepten worden nog verder toegelicht in de volgende subhoofdstukken: </p>
-<ul>
-<li><a href="rewrite/">SPARQL Rewrite methode</a></li>
-<li><a href="subgraph/">Subgraph methode</a></li>
 </ul>
 <p>Een samenvatting van de sterke en zwakke punten van beide concepten staat in <a href="../evaluatie/#vergelijking-implementaties">evaluatie van de twee
 implementaties</a>.</p>
