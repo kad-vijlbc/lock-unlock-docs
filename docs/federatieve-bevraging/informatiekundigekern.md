@@ -116,7 +116,7 @@ informatiekundige kern bij de ondersteuning hiervan worden in de volgende stap b
 Het concept van een informatiekundige kern heeft affiniteit met Linked Data technologies vanwege de
 inherente ondersteuning van Linked Data voor het koppelen van gedistribueerde gegevensbronnen. Wel
 is het zo dat Linked Data meerdere mogelijkheden biedt voor het ondersteunen van federatieve
-bevragingen. 
+bevragingen. Indien er expliciet geen voorzieningen aanwezig zijn om de registers ge-coordineerd te koppelen kan er toch verbindingen ontstaan tussen de registers door gebruik te maken van Linked Data. Hieronder worden enkele mogelijkheden kort besproken.  
 
 1. **Veldmatching op basis van koppelelementen:** Het is bijvoorbeeld goed mogelijk om meerdere
    bronnen federatief te bevragen zonder dat er een expliciete koppeling is tussen de bronnen. Wel
@@ -125,7 +125,7 @@ bevragingen.
    deze velden worden _gematcht_ (gebaseerd op de implementatie van een SPARQL-query), maar dit
    vereist dat de gebruiker van de gegevens deze velden kan identificeren.
 
-2. **Directe Links:** Zodra de velden zijn gematcht, kan een gebruiker besluiten de relaties tussen
+2. **Toevoegen directe Links:** Zodra de velden zijn gematcht, kan een gebruiker besluiten de relaties tussen
    instantiegegevens te formaliseren. Door bijvoorbeeld de datasets te voorzien van extra context op
    basis van gestandardiseerde ontologieën zoals RDFS, OWL en SHACL kunnen de bestaande datasets
    verrijkt  worden met nieuwe data (relaties tussen instantie data). Deze nieuwe data kan ook
@@ -135,34 +135,35 @@ bevragingen.
    te materialiseren. Dit vereist uiteraard de ontwikkeling van overeenkomsten tussen
    data-aanbieders waar federatieve data bestaan, maar leidt tot meer zekerheid in deze
    gematerialiseerde relaties dan wanneer een gebruiker deze zelf moet implementeren. Zodra er een
-   directe koppeling is gemaakt, is het eenvoudiger om federatief bevragen te stellen. 
+   directe koppeling is gemaakt, is het eenvoudiger om federatief bevragen te stellen.
 
-Met de eerste van deze twee opties kunnen data-aanbieders hun data eenvoudig beschikbaar stellen als
+3. **Herbruik van URIs:** Indien Linked Data sets aanwezig zijn (zoals bijvoorbeeld Kadaster data) dan kunnen andere bronnen deze URI's gebruiken in eigen datasets. Zo kan bijvoorbeeld de NHR voor de 'zetel' van een KVK Inschrijving direct doorverwijzen naar een BAG uri van Kadaster. Daarmee zijn de 2 datasets gekoppeld op basis van URI's. Linked data is zeer geschikt om op deze manier verschillende datasets te koppelen en wellich is LD hiervoor ontworpen <a
+href="https://5stardata.info/" target="_blank">(zie 5 sterren-model).</a>
+
+4. **Description Logic:** <a href="https://www.w3.org/TR/owl2-overview/" target="_blank">OWL ontologieen</a> in Linked Data kunnen datasets verzoen van context waarbij afleidingen mogelijk zijn. Een simpel maar krachtig concept is bijvoorbeeld owl:sameAs. Hiermee kunnen resources in LD gelijk verklaard worden. Zo kan resource (denk aan een informatie object) A gelijk verklaard worden aan resource B. Korter opgeschreven A=B. Indien resource B=C, dan is een afleiding mogelijk:  A moet ook gelijk zijn aan C want A=B en B=C (dus A=C). Een Stichting 'A' uit AMBI kan bijvoorbeeld gelijk verklaard worden met Inschrijving uit de KVK (B). Kadaster kan een Persoon gelijk verklaren aan de KVK inschrijving 'C'. Afgeleid kan worden dat de Kadaster persoon nu gelijk is aan de stichting in AMBI. Oftewel door formele relaties te leggen tussen datasets kan er meer data afgeleid worden dat tot meer verbindingen kan leiden. OWL ontologieen hebben meerdere mechanismen hiervoor en de mogelijke afleidingen hiervan zijn gestandardiseerd.   
+
+
+Met deze opties kunnen data-aanbieders hun data eenvoudig beschikbaar stellen als
 Linked Data en kunnen gebruikers de relaties tussen data binnen en buiten hun datasets onderzoeken
-en zelf definiëren. Dan kunnen data providers stappen 1 tot en met 3 volgen en het daarbij  laten.
-Het concept van de informatiekundige kern wil deze relaties echter explicieter beschikbaar maken
-voor gebruikers en daarmee de directe koppeling van informatie ondersteunen. Bij deze tweede optie
-is er ook een reeks opties met verschillende niveaus van betrokkenheid, hoe deze relaties
-explicieter kunnen worden gemaakt.
+en zelf definiëren. Theoretisch kunnen data-providers stappen 1 tot en met 3 volgen en het daarbij laten. Wel is het natuurlijk zo dat wanneer je gekoppeld bent met andere data dat je wellicht wensen en eisen hebt mbt deze link. Zo wil je bijvoorbeeld eisen stellen aan de beschikbaarheid van de data in de ander bron. Tevens wil je natuurlijk (minimaal) op de hoogte zijn van structuur veranderingen van de bronnen waarmee je gekoppeld bent, etc.
 
-Idealiter zorg je voor formele koppelelementen die de registers adopteren en onderhouden. De
-geformaliseerde koppelelementen komen in twee vormen voor:
+Het concept van de informatiekundige kern is om de koppeling tussen de registers te faciliteren door o.a. het formaliseren van <a href="https://realisatieibds.nl/attachment/entity/4d694095-b0e1-40d8-bd0e-6be013c9b455" target="_blank">identificerende gegevens.</a> 
 
-- of in de vorm van een **upperontologie**,
-- of in de vorm van **gematerialiseerde relaties** tussen instantiegegevens over verschillende
+Wellicht zou dit kunnen door een zogenaamde 'upper-ontologie' in LD  waarbij bijv relaties tussen registers expliciet gemaakt worden en deze beschikbaar zijn voor gebruikers. Een dergelijke ontologie zou wellicht een bijdrage kunnen leveren aan de adoptie van LD bij de registers. Bij deze aanpak is er ook een reeks opties met verschillende niveaus van betrokkenheid, hoe deze relaties explicieter kunnen worden gemaakt.
+
+Idealiter zorg je voor formele koppelelementen die de registers adopteren en onderhouden. Hiervoor zijn weer meerdere mogelijkheden aanwezig zoals bijv:
+
+-  **upperontologie voor koppelelementen**,
+-  **gematerialiseerde relaties** tussen instantiegegevens over verschillende
 registers heen
+- **een kernmodel voor alle registers in de vorm van een upperontologie**
 
-Beide worden hieronder beschreven en sluiten elkaar niet uit.
+Deze opties worden hieronder kort beschreven en sluiten elkaar niet uit.
 
-> **5 Star Linked Data:** Wanneer één of beide van deze opties tussen basisregistraties worden
-> geïntroduceerd, kunnen deze registers worden beoordeeld als 5-sterren in het
-> [5-sterrenmodel](./linkeddata.md#basis-principes) van Linked Data.
-
-##### Optie 1: Upperontologie
+##### Optie 1: Upperontologie voor koppelelementen
 
 Een [upperontologie](../achtergrond/glossary.md#upperontologie) definieert klassen en/of attributen
-die worden gedeeld tussen verschillende registers. Wellicht dat een upperontologie in FDS termen een
-Linked Data versie van een informatiekundige kern is. Een upperontologie zou bijvoorbeeld het
+die worden gedeeld tussen verschillende registers. Een (minimale) upperontologie zou bijvoorbeeld het
 attribuut BSN-nummer kunnen definiëren als het identificatienummer van een persoon en zowel de BRP
 als de BRK kunnen dit attribuut gebruiken bij het publiceren van identificatiegegevens gerelateerd
 aan personen. Deze gedeelde kenmerken kunnen worden aangeduid als sleutelvelden. 
@@ -191,9 +192,8 @@ halen.
 
 ##### Optie 2: Gematerialiseerde Relaties 
 
-Het is ook mogelijk om extra relaties af te leiden en deze te 'materialiseren'. Oftewel extra
-relaties kunnen (evt virtueel) toegevoegd worden. Deze materialisatie van relaties wordt niet
-gedefinieerd door de upperontologie maar tussen de instantiegegevens in de registers zelf; zie rode
+Het is ook mogelijk om extra relaties af te leiden bijvoorbeeld op basis van bovenstaande upperontologie. Deze relaties zou je evt kunnen 'materialiseren'. Oftewel extra
+relaties kunnen (evt virtueel) toegevoegd worden. Deze materialisatie van relaties zorgt voor een directe verbinding tussen de instantiegegevens in verschillende registers; zie rode
 lijnen in onderstaande afbeelding.
 
 |  ![Linked Data in context](images/registersLD6.png)  |
@@ -226,11 +226,17 @@ wel het nodige vereisen. Linked Data technologie maakt de introductie van deze d
 tussen instantiegegevens eenvoudig en illustreert een duidelijk voordeel van het gebruik van deze
 technologie ter ondersteuning van federatieve bevragingen.
 
+##### Optie 3: kernschema
+Het is natuurlijk ook mogelijk om een set van klasses, kenmerken en relaties af te spreken tussen de registers als een soort kernschema. Elk register zou een eigen extensie kunnen ontwikkelen maar vanwege de gedeelde kern met andere registers zijn de verbindingen tussen registers al gedefinieerd. Registers gebruiken elkaars uri's om op deze manier directe verbinden te leggen op instantie nivo.
+Een verdere uitbreiding van het kernschema zou de registers ook kunnen helpen met het vinden van de juiste gegevens op basis van het kernschema. Voordat je gegevens kunt koppelen moet je natuurlijk wel de juiste gegevens kunnen vinden. Zo zal Kadaster graag personen willen kunnen vinden in de BRP op basis van bijv NAW en wellicht geboorte-datum en -plaats. Hiermee kan wellicht een URI of BSN nummer gevonden worden waarmee een directe verbinding gelegd kan worden. Het standardiseren via het kernmschema van kenmerken zoals NAW, geboorte-datum en -plaats zorgt voor een stabiel informatie model gegevens te vinden. 
+
+
 ### Ontwerp van de Informatiekundige Kern met Linked Data
 
-Het ontwerp van de informatiekundige kern in Linked Data zou zowel de upperontologie moeten omvatten
-als ook afspraken over de gematerialiseerde relaties tussen (basis)registraties waar logische
-relaties bestaan. Er moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties
+Het ontwerp van een evt informatiekundige kern in Linked Data zou een upperontologie kunnen zijn met minimaal bijvoorbeeld afspraken over (gematerialiseerde) relaties tussen (basis)registraties (daar waar logische
+relaties bestaan). Een zeer belangrijke voorwaarde is natuurlijk dat de registers een Linked Data versie van hun gegevens ontwikkelen, publiceren en afschermen waar dat nodig is. De adoptie van Linked data door de registers kan wellicht versneld worden door een informatiekundige kern in Linked Data. Een informatiekundige kern in LD kan voor extra aandacht van LD zorgen, kan tot een kenniscentrum leiden voor registers die gegevens in LD willen publiceren, en maakt natuurlijk federatieve bevragingen mogelijk.
+
+ moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties
 bij het ontwerpen van een dergelijke hogere ontologie en bij het onderhouden van eventuele
 gematerialiseerde relaties tussen de basisregistraties. Door ervoor te zorgen dat deze afspraken
 worden nageleefd, kan de gebruikstoegankelijkheid en herbruikbaarheid van de basisregistraties als
