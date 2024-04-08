@@ -7,6 +7,8 @@ doen tussen beide implementatie strategieën en dat verdient dan ook meer aandac
 vervolgonderzoeken; zie [aanbevelingen: implementaties
 doorontwikkelen](../conclusies.md#implementaties-doorontwikkelen).
 
+Zie verder ook de [conclusies van de beproevingen](../conclusies.md#conclusies-van-beproevingen).
+
 ### Subgraph
 
 - Een autorisatiebeleid is eenvoudig te valideren met de subgraaf methode. Doordat er een complete
