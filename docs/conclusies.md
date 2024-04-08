@@ -262,13 +262,22 @@ Naast de performance van Linked Data oplossing in het geheel, stelt de afschermi
 complexiteit verhogende eisen en karakteristieken. Het verdient meer onderzoek naar de performance
 van specifiek dit onderdeel.
 
-**<a id="implementatie-doorontwikkelen" href="#implementatie-doorontwikkelen">Implementatie
+**<a id="implementaties-doorontwikkelen" href="#implementaties-doorontwikkelen">Implementaties
 doorontwikkelen</a>**
 
 Een eerste aanzet en prototyping rondom
 [implementaties](./autorisatie-als-linkeddata/implementaties/index.md) is gedaan, maar verdient meer
-opvolging. Hierbij kan gedacht worden aan vervolgonderzoeken in samenwerking met vendors van
-triplestores en/of academici.
+opvolging. Er zijn twee verschillende strategieën uitgewerkt om ervaring op te doen met deze twee
+richtingen. Er was geen mogelijkheid om deze uitgebreid te vergelijken en voordelen en nadelen van
+de verschillende strategieën scherp naast elkaar te zetten; alleen een korte
+[evaluatie](./autorisatie-als-linkeddata/evaluatie.md). Hier is nog aanvullend onderzoek nodig.
+
+Uitgaande dat er gewerkt is aan [standaardiseren van de autorisatie
+ontologie](#autorisatie-ontologie-verder-uitwerken) en dat aanvullend onderzoek is gedaan in
+implementatie strategieën, zouden implementaties wél (of ook) in triplestores toegepast kunnen
+worden. Daarom kan kan bij deze aanbeveling gedacht worden aan vervolgonderzoeken in samenwerking
+met open source projecten als <a href="https://jena.apache.org/" target="_blank">Apache Jena</a>,
+vendors van triplestores en academici.
 
 ## Disclaimer
 
