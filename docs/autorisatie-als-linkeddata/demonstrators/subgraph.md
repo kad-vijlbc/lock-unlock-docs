@@ -13,7 +13,14 @@ ervaringen die hiermee zijn opgedaan zijn deels verder geïntegreerd in de demon
 conclusies en aanbevelingen worden besproken in het hoofdstuk [evaluatie](../evaluatie.md).
 
 Hieronder worden een aantal voorbeelden gegeven van queries die wel/niet zijn toegestaan voor
-specifieke gebruikers. 
+specifieke gebruikers. Al deze queries kunnen uitgevoerd worden in de demonstrator op
+<a href="https://subgraph.dst.test.cloud.kadaster.nl/" target="_blank">subgraph.dst.test.cloud.kadaster.nl</a>.
+Verschillende registers kunnen aangeroepen worden door het endpoint als volgt aan te passen:
+
+- ANBI: `https://subgraph.dst.test.cloud.kadaster.nl/anbi/sparql?persona=h_de_vries`
+- BRK: `https://subgraph.dst.test.cloud.kadaster.nl/brk/sparql?persona=h_de_vries`
+- BRP: `https://subgraph.dst.test.cloud.kadaster.nl/brp/sparql?persona=h_de_vries`
+- NHR: `https://subgraph.dst.test.cloud.kadaster.nl/nhr/sparql?persona=h_de_vries`
 
 ## Algemene Bedrijfsgegevens
 
