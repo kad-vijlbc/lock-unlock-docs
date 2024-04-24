@@ -137,21 +137,21 @@ bevragingen. Indien er expliciet geen voorzieningen aanwezig zijn om de register
    gematerialiseerde relaties dan wanneer een gebruiker deze zelf moet implementeren. Zodra er een
    directe koppeling is gemaakt, is het eenvoudiger om federatief bevragen te stellen.
 
-3. **Herbruik van URIs:** Indien Linked Data sets aanwezig zijn (zoals bijvoorbeeld Kadaster data) dan kunnen andere bronnen deze URI's gebruiken in eigen datasets. Zo kan bijvoorbeeld de NHR voor de 'zetel' van een KVK Inschrijving direct doorverwijzen naar een BAG uri van Kadaster. Daarmee zijn de 2 datasets gekoppeld op basis van URI's. Linked data is zeer geschikt om op deze manier verschillende datasets te koppelen en wellich is LD hiervoor ontworpen <a
+3. **Herbruik van URIs:** Indien Linked Data sets aanwezig zijn (zoals bijvoorbeeld Kadaster data) dan kunnen andere bronnen deze URI's gebruiken in eigen datasets. Zo kan bijvoorbeeld de NHR voor de 'zetel' van een KVK Inschrijving direct doorverwijzen naar een BAG uri van Kadaster. Daarmee zijn de 2 datasets gekoppeld op basis van URI's. Linked data is zeer geschikt om op deze manier verschillende datasets te koppelen en wellicht is LD hiervoor ontworpen <a
 href="https://5stardata.info/" target="_blank">(zie 5 sterren-model).</a>
 
-4. **Description Logic:** <a href="https://www.w3.org/TR/owl2-overview/" target="_blank">OWL ontologieen</a> in Linked Data kunnen datasets verzoen van context waarbij afleidingen mogelijk zijn. Een simpel maar krachtig concept is bijvoorbeeld owl:sameAs. Hiermee kunnen resources in LD gelijk verklaard worden. Zo kan resource (denk aan een informatie object) A gelijk verklaard worden aan resource B. Korter opgeschreven A=B. Indien resource B=C, dan is een afleiding mogelijk:  A moet ook gelijk zijn aan C want A=B en B=C (dus A=C). Een Stichting 'A' uit AMBI kan bijvoorbeeld gelijk verklaard worden met Inschrijving uit de KVK (B). Kadaster kan een Persoon gelijk verklaren aan de KVK inschrijving 'C'. Afgeleid kan worden dat de Kadaster persoon nu gelijk is aan de stichting in AMBI. Oftewel door formele relaties te leggen tussen datasets kan er meer data afgeleid worden dat tot meer verbindingen kan leiden. OWL ontologieen hebben meerdere mechanismen hiervoor en de mogelijke afleidingen hiervan zijn gestandardiseerd.   
+4. **Description Logic:** <a href="https://www.w3.org/TR/owl2-overview/" target="_blank">OWL ontologieen</a> in Linked Data kunnen datasets voorzien van context waarbij afleidingen mogelijk zijn. Een simpel maar krachtig concept is bijvoorbeeld owl:sameAs. Hiermee kunnen resources in LD gelijk verklaard worden. Zo kan resource (denk aan een informatie object) A gelijk verklaard worden aan resource B. Korter opgeschreven A=B. Indien resource B=C, dan is een afleiding mogelijk:  A moet ook gelijk zijn aan C want A=B en B=C (dus A=C). Een Stichting 'A' uit AMBI kan bijvoorbeeld gelijk verklaard worden met Inschrijving uit de KVK (B). Kadaster kan een Persoon gelijk verklaren aan de KVK inschrijving 'C'. Afgeleid kan worden dat de Kadaster persoon nu gelijk is aan de stichting in AMBI. Oftewel door formele relaties te leggen tussen datasets kan er meer data afgeleid worden dat tot meer verbindingen kan leiden. OWL ontologieen hebben meerdere mechanismen hiervoor en de mogelijke afleidingen hiervan zijn gestandardiseerd.   
 
 
 Met deze opties kunnen data-aanbieders hun data eenvoudig beschikbaar stellen als
 Linked Data en kunnen gebruikers de relaties tussen data binnen en buiten hun datasets onderzoeken
-en zelf definiëren. Theoretisch kunnen data-providers stappen 1 tot en met 3 volgen en het daarbij laten. Wel is het natuurlijk zo dat wanneer je gekoppeld bent met andere data dat je wellicht wensen en eisen hebt mbt deze link. Zo wil je bijvoorbeeld eisen stellen aan de beschikbaarheid van de data in de ander bron. Tevens wil je natuurlijk (minimaal) op de hoogte zijn van structuur veranderingen van de bronnen waarmee je gekoppeld bent, etc.
+en zelf definiëren. Theoretisch kunnen data-providers stappen 1 tot en met 3 volgen en het daarbij laten. Wel is het natuurlijk zo dat wanneer je gekoppeld bent met andere data dat je wellicht wensen en eisen hebt mbt deze link. Zo wil je bijvoorbeeld eisen stellen aan de beschikbaarheid van de data in de andere bron. Tevens wil je natuurlijk (minimaal) op de hoogte zijn van structuur veranderingen van de bronnen waarmee je gekoppeld bent, etc.
 
 Het concept van de informatiekundige kern is om de koppeling tussen de registers te faciliteren door o.a. het formaliseren van <a href="https://realisatieibds.nl/attachment/entity/4d694095-b0e1-40d8-bd0e-6be013c9b455" target="_blank">identificerende gegevens.</a> 
 
-Wellicht zou dit kunnen door een zogenaamde 'upper-ontologie' in LD  waarbij bijv relaties tussen registers expliciet gemaakt worden en deze beschikbaar zijn voor gebruikers. Een dergelijke ontologie zou wellicht een bijdrage kunnen leveren aan de adoptie van LD bij de registers. Bij deze aanpak is er ook een reeks opties met verschillende niveaus van betrokkenheid, hoe deze relaties explicieter kunnen worden gemaakt.
+Wellicht zou dit kunnen door een zogenaamde 'upper-ontologie' in LD waarbij bijvoorbeeld relaties tussen registers expliciet gemaakt worden en deze beschikbaar zijn voor gebruikers. Een dergelijke ontologie zou wellicht een bijdrage kunnen leveren aan de adoptie van LD bij de registers. Bij deze aanpak is er ook een reeks opties met verschillende niveaus van betrokkenheid, hoe deze relaties explicieter kunnen worden gemaakt.
 
-Idealiter zorg je voor formele koppelelementen die de registers adopteren en onderhouden. Hiervoor zijn weer meerdere mogelijkheden aanwezig zoals bijv:
+Idealiter zorg je voor formele koppelelementen die de registers adopteren en onderhouden. Hiervoor zijn weer meerdere mogelijkheden aanwezig zoals bijvoorbeeld:
 
 -  **upperontologie voor koppelelementen**,
 -  **gematerialiseerde relaties** tussen instantiegegevens over verschillende
@@ -192,8 +192,8 @@ halen.
 
 ##### Optie 2: Gematerialiseerde Relaties 
 
-Het is ook mogelijk om extra relaties af te leiden bijvoorbeeld op basis van bovenstaande upperontologie. Deze relaties zou je evt kunnen 'materialiseren'. Oftewel extra
-relaties kunnen (evt virtueel) toegevoegd worden. Deze materialisatie van relaties zorgt voor een directe verbinding tussen de instantiegegevens in verschillende registers; zie rode
+Het is ook mogelijk om extra relaties af te leiden bijvoorbeeld op basis van bovenstaande upperontologie. Deze relaties zou je eventueel kunnen 'materialiseren'. Oftewel extra
+relaties kunnen (virtueel) toegevoegd worden. Deze materialisatie van relaties zorgt voor een directe verbinding tussen de instantiegegevens in verschillende registers; zie rode
 lijnen in onderstaande afbeelding.
 
 |  ![Linked Data in context](images/registersLD6.png)  |
@@ -202,7 +202,7 @@ lijnen in onderstaande afbeelding.
 
 Het materialiseren van relaties tussen registers is in verschillende scenario's logisch. Een
 voorbeeld is het formaliseren van relaties tussen registers op basis van hun ruimtelijke relatie met
-elkaar. Bijvoorbeeld de relatie tussen een `bag:Verblijfsobject` en de `brk:Perceel` waaraan dit
+elkaar. Bijvoorbeeld de relatie tussen een `bag:Verblijfsobject` en het `brk:Perceel` waaraan dit
 object gerelateerd is op basis van zijn ruimtelijke nabijheid (overlappende geometrie bijvoorbeeld).
 Hoewel de relatie geografisch gemaakt kan worden, kan deze ook toegevoegd worden in één of beide
 registers. In de praktijk kan de gebruiker door de introductie van deze geformaliseerde relatie zien
@@ -217,7 +217,7 @@ gelijk gesteld wordt aan een KVKnummer in de upperontologie die vervolgens ook g
 een NHR inschrijving. Hiermee ontstaan er dus directe relaties tussen de registers. 
 
 De aanwezigheid van directe relaties tussen de registers maakt het nog makkelijker om federatieve
-bevragingen te doen. Integrale bevragingen zijn hierbij mogelijk maar ook bevragingen mbt
+bevragingen te doen. Integrale bevragingen zijn hierbij mogelijk maar ook bevragingen m.b.t.
 consistentie zijn hierbij zeer makkelijk. Denk bijvoorbeeld aan de vraag: welke BAG-Panden zijn
 onbekend bij Kadaster vanuit de NHR. Of vanuit de BRK: welke BRP personen zijn (on)bekend bij de
 BRP. Deze queries geven inzicht in de consistentie van samenhangende registers. Het schrijven van
@@ -227,21 +227,21 @@ tussen instantiegegevens eenvoudig en illustreert een duidelijk voordeel van het
 technologie ter ondersteuning van federatieve bevragingen.
 
 ##### Optie 3: kernschema
-Het is natuurlijk ook mogelijk om een set van klasses, kenmerken en relaties af te spreken tussen de registers als een soort kernschema. Elk register zou een eigen extensie kunnen ontwikkelen maar vanwege de gedeelde kern met andere registers zijn de verbindingen tussen registers al gedefinieerd. Registers gebruiken elkaars uri's om op deze manier directe verbinden te leggen op instantie nivo.
-Een verdere uitbreiding van het kernschema zou de registers ook kunnen helpen met het vinden van de juiste gegevens op basis van het kernschema. Voordat je gegevens kunt koppelen moet je natuurlijk wel de juiste gegevens kunnen vinden. Zo zal Kadaster graag personen willen kunnen vinden in de BRP op basis van bijv NAW en wellicht geboorte-datum en -plaats. Hiermee kan wellicht een URI of BSN nummer gevonden worden waarmee een directe verbinding gelegd kan worden. Het standardiseren via het kernmschema van kenmerken zoals NAW, geboorte-datum en -plaats zorgt voor een stabiel informatie model gegevens te vinden. 
+Het is natuurlijk ook mogelijk om een set van klasses, kenmerken en relaties af te spreken tussen de registers als een soort kernschema. Elk register zou een eigen extensie kunnen ontwikkelen maar vanwege de gedeelde kern met andere registers zijn de verbindingen tussen registers al gedefinieerd. Registers gebruiken elkaars uri's om op deze manier directe verbindingen te leggen op instantie niveau.
+Een verdere uitbreiding van het kernschema zou de registers ook kunnen helpen met het vinden van de juiste gegevens op basis van het kernschema. Voordat je gegevens kunt koppelen moet je natuurlijk wel de juiste gegevens kunnen vinden. Zo zal Kadaster graag personen willen kunnen vinden in de BRP op basis van bijvoorbeeld NAW en wellicht geboorte-datum en -plaats. Hiermee kan wellicht een URI of BSN nummer gevonden worden waarmee een directe verbinding gelegd kan worden. Het standardiseren via het kernmschema van kenmerken zoals NAW, geboorte-datum en -plaats zorgt voor een stabiel informatiemodel om gegevens te vinden. 
 
 
 ### Ontwerp van de Informatiekundige Kern met Linked Data
 
-Het ontwerp van een evt informatiekundige kern in Linked Data zou een upperontologie kunnen zijn met minimaal bijvoorbeeld afspraken over (gematerialiseerde) relaties tussen (basis)registraties (daar waar logische
+Het ontwerp van een informatiekundige kern in Linked Data zou een upperontologie kunnen zijn met minimaal bijvoorbeeld afspraken over (gematerialiseerde) relaties tussen (basis)registraties (daar waar logische
 relaties bestaan). Een zeer belangrijke voorwaarde is natuurlijk dat de registers een Linked Data versie van hun gegevens ontwikkelen, publiceren en afschermen waar dat nodig is. De adoptie van Linked data door de registers kan wellicht versneld worden door een informatiekundige kern in Linked Data. Een informatiekundige kern in LD kan voor extra aandacht van LD zorgen, kan tot een kenniscentrum leiden voor registers die gegevens in LD willen publiceren, en maakt natuurlijk federatieve bevragingen mogelijk.
 
- moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties
+Er moeten afspraken worden gemaakt tussen de beheerders van de basisregistraties
 bij het ontwerpen van een dergelijke hogere ontologie en bij het onderhouden van eventuele
 gematerialiseerde relaties tussen de basisregistraties. Door ervoor te zorgen dat deze afspraken
 worden nageleefd, kan de gebruikstoegankelijkheid en herbruikbaarheid van de basisregistraties als
 datastelsel worden gewaarborgd.
 
-De [testopstelling](./testopstelling.md) biedt enige demonstratie van informatiekundige kern werking
+De [testopstelling](./testopstelling.md) biedt een demonstratie van informatiekundige kern werking
 in een federatieve bevraging, hoewel deze sterk vereenvoudigd is, zoals al beschreven in het
 [informatiemodel](./informatiemodel.md).
