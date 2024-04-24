@@ -74,9 +74,9 @@ eigendomsinformatie aanwezig is van een geselecteerd perceel.
 
 ![FDS](images/FDS-DataV2.png) 
 
-In elke widget (tabel of grafiek) staat bij welke bronnen geraadpleegd zijn. Zo wordt er NHR
+Bij elke widget (tabel of grafiek) staat welke bronnen geraadpleegd zijn. Zo wordt er NHR
 informatie opgezocht in de NHR zoals stichtingsjaar en RSIN nummer voor NHR inschrijvingen die
-eigenaar zijn van het geselecteerde perceel. Ook de BRP wordt geraadpleegd om extra persoonsinformatie op te halen van een Perceels eigenaar. 
+eigenaar zijn van het geselecteerde perceel. Ook de BRP wordt geraadpleegd om extra persoonsinformatie op te halen van een Perceel eigenaar. 
 
 ![FDS](images/FDS-Data.png)
 
