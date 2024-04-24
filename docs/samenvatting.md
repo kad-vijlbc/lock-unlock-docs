@@ -8,14 +8,14 @@ en te testen.
 
 ## Federatieve bevraging
 
-Voordat we aan de autorisatie (on)mogelijkheden zijn begonnen, hebben we federatieve bevraging uitgewerkt en daar een [testopstelling](./federatieve-bevraging/testopstelling.md) voor gemaakt. Hierbij hebben we verschillen tussen [API's](./federatieve-bevraging/apis.md) beschreven, onderdelen van een [informatiekundige kern](./federatieve-bevraging/informatiekundigekern.md) uitgewerkt en een [informatiemodel](./federatieve-bevraging/informatiemodel.md) en [demonstator](./federatieve-bevraging/demonstrator.md) opgeleverd.
+Voordat we aan de autorisatie (on)mogelijkheden zijn begonnen, hebben we federatieve bevraging uitgewerkt en daar een [testopstelling](./federatieve-bevraging/testopstelling.md) voor gemaakt. Hierbij hebben we verschillen tussen [API's](./federatieve-bevraging/apis.md) beschreven, onderdelen van een [informatiekundige kern](./federatieve-bevraging/informatiekundigekern.md) uitgewerkt en een [informatiemodel](./federatieve-bevraging/informatiemodel.md) en [demonstrator](./federatieve-bevraging/demonstrator.md) opgeleverd.
 Dit biedt de randvoorwaarden om te komen tot afscherming.
 
 ## Afscherming
 
 In een federatieve bevraging zijn diverse
-[afschermingspatronen](./afscherming/afschermingspatronen.md) van belang. In een uitgebreid [desk
-research](./afscherming/index.md#leeswijzer) hebben deze uitgewerkt, [bestaande
+[afschermingspatronen](./afscherming/afschermingspatronen.md) van belang. In een uitgebreide [desk
+research](./afscherming/index.md#leeswijzer) hebben we deze uitgewerkt, [bestaande
 implementaties](./afscherming/bestaande-implementaties.md) onderzocht en
 [oplossingsrichtingen](./afscherming/oplossingsrichtingen.md) bedacht. Daaruit is ons
 [onderzoeksvoorstel](./afscherming/onderzoeksvoorstel.md) opgesteld: **[autorisatie als Linked
@@ -34,11 +34,11 @@ Autorisatie oplossingen zouden de volgende afschermingspatronen moeten ondersteu
   relatie-richting](./afscherming/afschermingspatronen.md#toegang-tot-data-in-een-bepaalde-richting):
   het opvragen van informatie in een bepaalde richting is mogelijk, maar het opvragen van de
   omgekeerde richting is niet mogelijk. Bijvoorbeeld: het zou mogelijk moeten zijn om te zoeken naar
-  de eigenaar van een specifiek perceel op basis van het perceelnummer maar niet alle perceelnummers
+  de eigenaar van een specifiek perceel op basis van het perceelnummer, maar niet alle perceelnummers
   die iemand in eigendom heeft op basis van naam.
 
 - aggregatie mogelijkheden: het kan zijn dat gebruikers geen toegang hebben tot de micro data maar
-  wel tot aggregaties (onder bepaalde voorwaarden) Denk bijvoorbeeld aan de gemiddelde
+  wel tot aggregaties (onder bepaalde voorwaarden). Denk bijvoorbeeld aan de gemiddelde
   transactieprijzen van woningen in een bepaald gebied.
 
 - vrije query mogelijkheiden ondersteunen: de kracht van Linked Data is dat je zonder een vooraf
