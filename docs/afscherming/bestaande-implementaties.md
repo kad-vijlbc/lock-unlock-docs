@@ -2,7 +2,7 @@
 title: Bestaande Implementaties
 ---
 
-Een van de onderdelen van het desk research was de beoordeling van bestaande oplossingen voor
+Een van de onderdelen van onze desk research was de beoordeling van bestaande oplossingen voor
 toegangscontrole voor Linked Data bronnen. De lijst van implementaties is niet uitputtend, maar
 geeft wel een beeld van welke implementaties we zijn tegengekomen. 
 
@@ -195,7 +195,7 @@ systemen van verschillende organisaties zijn, wordt dat moeilijk en complex.
 
 ### Oplossing
 
-De Verwerkinggenlogging is een API-standaard die is ontwikkeld door VNG Realisatie en deze standaard
+De Verwerkingenlogging is een API-standaard die is ontwikkeld door VNG Realisatie en deze standaard
 is opgenomen in de GEMMA referentiearchitectuur. Deze API-standaard biedt leveranciers van
 informatiesystemen gestandaardiseerde API-specificaties voor het vastleggen en ontsluiten van
 metagegevens behorend bij vastgelegde (logging) verwerkingen.
