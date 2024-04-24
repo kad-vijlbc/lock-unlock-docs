@@ -10,16 +10,16 @@ van Lock-Unlock.
 
 ### Leeswijzer
 
-We hebben hiervoor een [desk research](LockUnlock-DeskResearchAutorisatiev1.0-27102023.pdf) gedaan
+We hebben hiervoor [desk research](LockUnlock-DeskResearchAutorisatiev1.0-27102023.pdf) gedaan
 waarin we hebben uitgewerkt wat authenticatie en autorisatie eigenlijk is, waarom we zouden willen
 loggen wat er gebeurt, welke afschermingspatronen mogelijk en/of nodig zijn en wat mogelijke
 oplossingrichtingen zijn. Daaruit volgt het voorstel van wat we verder hebben onderzocht, ons
 onderzoeksvoorstel. 
 
-Van het desk research is in deze documentatie site een kopie te vinden om zowel de bevindingen van
-dit desk research vast te leggen als onderdeel van de volledige documentatie van dit project, maar
-ook om verwijzingen naar dit desk research op te nemen in de bevindingen van het project dat volgde
-op dit desk research.
+Van de desk research is in deze documentatie site een kopie te vinden om zowel de bevindingen van
+deze desk research vast te leggen als onderdeel van de volledige documentatie van dit project, maar
+ook om verwijzingen naar deze desk research op te nemen in de bevindingen van het project dat volgde
+op deze desk research.
 
 - [Inleiding Autorisatie](./autorisatie.md)
 - [Afschermingspatronen](./afschermingspatronen.md) 
