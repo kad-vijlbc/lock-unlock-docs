@@ -2,7 +2,7 @@
 title: Afschermingspatronen
 ---
 
-Zoals in het vorige hoofdstuk als is gesteld, willen we graag een [federatieve
+Zoals in het vorige hoofdstuk al is gesteld, willen we graag een [federatieve
 bevraging](../federatieve-bevraging/index.md) doen. Dat betekent een query over meerdere silo's en
 dus meerdere endpoints. Zie ook [informatiekundige
 kern](../federatieve-bevraging/informatiekundigekern.md),
@@ -13,10 +13,10 @@ Omdat deze databronnen gevoelige informatie bevatten, moet autorisatie op deze g
 
 Als we informatie (data, gegevens) willen afschermen en daar onder voorwaarden toegang toe willen
 verlenen ([autorisatie](autorisatie.md)) kunnen we een aantal afschermingspatronen onderkennen.
-Patronen van hoe informatie georganiseerd is of we daarin afscherming zouden willen afdwingen.
+Patronen van hoe informatie georganiseerd is en of we daarin afscherming zouden willen afdwingen.
 
-Voor de flexibiliteit van het gebruik en hergebruik van data is per gebruik vrij kunnen bevragen (query’n) of navigeren door het datastelsel zeer gewenst / noodzakelijk. Het doel is om **vrije bevraging** (query) te ondersteunen onder de voorwaarden die dmv
-autorisatie is toegestaan.
+Voor de flexibiliteit van het gebruik en hergebruik van data is vrij te kunnen bevragen (query’n) of navigeren door het datastelsel zeer gewenst / noodzakelijk. Het doel is om **vrije bevraging** (query) te ondersteunen onder de voorwaarden die dmv
+autorisatie zijn toegestaan.
 
 Welke beperkingen zijn daarin vanuit die voorwaarden en autorisatie dan gewenst? Dit zijn
 requirements die gesteld worden aan de autorisatie oplossing.
@@ -33,7 +33,7 @@ toegepast worden.
 | Subset Requirement |
 
 In Linked Data kan een subset ook subgraph genoemd worden (zie
-[glossary](../achtergrond/glossary.md)). Bovenstaande concept is dan ook voor Linked Data van
+[glossary](../achtergrond/glossary.md)). Bovenstaand concept is dan ook voor Linked Data van
 toepassing. Het is mogelijk om horizontale of verticale sub-graphs te maken. Een horizontale
 sub-graph bevat dan niet alle triples maar een selectie van bijvoorbeeld een specifieke regio. Een
 verticale sub-graph bevat alleen de triples die een specifiek attribuut betreffen van een subject en
