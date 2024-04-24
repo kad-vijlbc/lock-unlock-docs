@@ -181,7 +181,7 @@ De ANBI dataset kan direct gekoppeld worden aan NHR Inschrijvingen (zie diagram 
 
 #### `ik:heeftUBO`
 
-De `ik:heeftUBO` relatie is specifiek gedefinieerd om de relatie tussen individuen in de NHR en de
+De `ik:heeftUBO` relatie [(Ultimate Beneficial Owner)](https://www.kvk.nl/veilig-zakendoen/wat-is-een-ubo/) is specifiek gedefinieerd om de relatie tussen individuen in de NHR en de
 BRP te ondersteunen. In dit geval was het niet voldoende om een `owl:sameAs` relatie in te voeren,
 omdat er geen gedeelde identifier (zoals een BSN-nummer) aanwezig was en er dus op basis van deze
 nieuwe relatie twee verschillende identificerende attributen aan elkaar gerelateerd moesten worden.
