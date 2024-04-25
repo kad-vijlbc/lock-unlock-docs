@@ -54,8 +54,8 @@ Inferentie gaat over het afleiden of gevolgtrekking van nieuwe kennis uit bestaa
 
 ### Linked Data
 
-Linked data is manier om data te structureren en te verbinden over het web en maakt gebruik van
-stanfaarden zoals URI's, RDF en ontologieen gedefinieerd in [RDF](#rdf) zoals RDFS, [OWL](#owl) en
+Linked data is een manier om data te structureren en te verbinden over het web en maakt gebruik van
+standaarden zoals URI's, RDF en ontologieën gedefinieerd in [RDF](#rdf) zoals RDFS, [OWL](#owl) en
 [SHACL](#shacl). 
 
 ### Open Policy Agent
@@ -67,13 +67,13 @@ Open Policy Agent (OPA) is een open-source beleidsmotor voor toegangscontrole en
 
 ### OWL
 
-OWL staat voor de Web Ontology Language en is een gestandardiseerde taal voor formaliseren van
-ontologieen op basis van Linked Data.
+OWL staat voor de Web Ontology Language en is een gestandardiseerde taal voor het formaliseren van
+ontologieën op basis van Linked Data.
 
 ### Privacy Enhancing Technologies (PETs)
 
-PET is een verzamelnaam voor verschillende technieken die de afscherming van (persoons-)gegevens ondersteunen
-PETs faciliteren dat analyses kunnen worden uitgevoerd zonder de onderliggende data in te zien, zo worden toepassingen mogelijk die anders onmogelijk zouden zijn. PETs zien wij dan ook niet als technieken die autorisaties inregelen voor het bevragen van specifieke data maar faciliteren voornamelijk analyses waarbij toegang tot de onderliggende data niet toegestaan/gewenst is.
+PET is een verzamelnaam voor verschillende technieken die de afscherming van (persoons-)gegevens ondersteunen.
+PETs faciliteren dat analyses kunnen worden uitgevoerd zonder de onderliggende data in te zien, zo worden toepassingen mogelijk die anders onmogelijk zouden zijn. PETs zien wij dan ook niet als technieken die autorisaties inregelen voor het bevragen van specifieke data, maar faciliteren voornamelijk analyses waarbij toegang tot de onderliggende data niet toegestaan/gewenst is.
 
 | Voorbeelden: | |
 |----|----|
@@ -88,14 +88,14 @@ PETs faciliteren dat analyses kunnen worden uitgevoerd zonder de onderliggende d
 ### RDF
 
 RDF staat voor Resource Description Framework. Het is een gestandardiseerd model voor het opslaan
-van verwerkbare gegevens en biedt een zeer veel flexibiliteit mbt het structureren en beschrijven
+van verwerkbare gegevens en biedt zeer veel flexibiliteit mbt het structureren en beschrijven
 van gegevens.
 
 ### SHACL
 
-SHACL staat voor Shapes Constraint Language. Het is een W3C stdnaard voor het valideren van RDF data
+SHACL staat voor Shapes Constraint Language. Het is een W3C standaard voor het valideren van RDF data
 volgens een Shacl model. Via Shacl kun je zogenaamde Shapes definieren die structuren beschrijven
-van RDF data. Vervolgens kan RDF data getest worden of ze voldoen aan deze shapes. 
+van RDF data. Vervolgens kan RDF data getoetst worden om te controleren of deze voldoet aan deze shapes. 
 
 ### SPARQL
 
