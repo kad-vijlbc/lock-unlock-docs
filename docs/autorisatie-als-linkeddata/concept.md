@@ -45,7 +45,6 @@ Samengevat zijn de hoofduitgangspunten voor het concept Autorisatie als Linked D
 - Autorisatieregels zijn vastgelegd in Linked Data op basis van een autorisatie ontologie
 - Autorisatieregels zijn beschrijven in RDF format en geinstantieerd op basis van de autorisatie
   ontologie
-- Een autorisatie implementatie gebruikt de autorisatie-regels in   en dat is voldoende voor een
+- Een autorisatie implementatie gebruikt de autorisatie-regels en dat is voldoende voor een
   volledige implementatie
-- Een autorisatie implementatie zit achter een SPARQL endpoint zodat alle Linked Data standaarden in
-  tact blijven
+- Een autorisatie implementatie zit achter een SPARQL endpoint zodat alle Linked Data standaarden intact blijven
