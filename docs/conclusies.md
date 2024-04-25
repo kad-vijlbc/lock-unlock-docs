@@ -14,7 +14,7 @@ Hoewel het doel van dit project vooral lag op [autorisatie als Linked
 Data](./autorisatie-als-linkeddata/index.md), is een deel van de aandacht ook gegaan naar
 [federatieve bevraging](./federatieve-bevraging/index.md). Dat schetst namelijk de context waarin
 [afscherming](./afscherming/index.md) zou moeten plaatsvinden. Uiteraard hebben we ook beproefd in
-hoeverre autorisatie als Linked Data mogelijk en haalbaar is via prototype implementaties met 2 verschillende aanpakken. Over de voor- en na-delen van de 2 aanpkken hebben we apart een korte
+hoeverre autorisatie als Linked Data mogelijk en haalbaar is via prototype implementaties met 2 verschillende aanpakken. Over de voor- en na-delen van de 2 aanpakken hebben we apart een korte
 [evaluatie](./autorisatie-als-linkeddata/evaluatie.md) geschreven. De conclusies volgen hier:
 
 :warning: Zie ook [disclaimer](#disclaimer).
@@ -44,12 +44,12 @@ De autorisatieregels zijn _declaratief_. Dat betekent dat de gewenste toegang of
 gespecificeerd kan worden. Onderliggende uitvoering en zelfs uitwerking wordt overgelaten aan een
 'engine' die zorgdraagt voor de afscherming.
 
-Dit houdt ook in dat autorisatieregels data is `#data-gedreven`. Dit betekent:
+Dit houdt ook in dat de autorisatieregels *zelf* data zijn (`#data-gedreven`). Dit betekent:
 
 - dat de autorisatieregels kunnen worden bevraagd (wie heeft toegang tot wat en eventueel zelfs
   waarom (niet)). Wellicht is het mogelijk om te verwijzen t/m de wettelijke grondslag?
 - dat de autorisatieregels kunnen worden opgesteld en gedefinieerd onafhankelijk van de software
-  (engine) waarin de regels worden afgedwongen
+  (engine) waarmee de regels worden afgedwongen
 - dat de autorisatieregels als _knowledge graph_ toegankelijk zijn
 - dat de autorisatieregels opgesteld kunnen worden gebruikmakende van de Linked Data schema's
 
@@ -58,7 +58,7 @@ href="#autorisatie-ontologie-voor-standaardisatie">Autorisatie ontologie voor st
 
 De autorisatieregels kunnen worden gestandaardiseerd in een _autorisatie ontologie_. Dat betekent
 dat een software implementatie van deze ontologie als engine gebruikt kan worden om de data van de
-autorisatieregels uit te voeren. Doordat een ontologie programeertaal onafhankelijk is, kunnen er
+autorisatieregels uit te voeren. Doordat een ontologie programmeertaal onafhankelijk is, kunnen er
 meerdere implementaties gemaakt worden voor de autorisatie ontologie.
 
 **<a id="declaratieve-autorisatieregels-gekoppeld-aan-bestaande-ontologieen"
@@ -77,15 +77,15 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 
 ### Conclusies van beproevingen
 
-- het is mogelijk om gebruik te maken van de data om autorisatieregels op te stellen. Zo kan er
+- het is mogelijk om gebruik te maken van de data om autorisatieregels op te stellen. Zo kunnen er
   bijvoorbeeld toegangsregels opgesteld worden voor een bepaalde gemeente. De daadwerkelijke
   gemeente wordt uit de dataset opgehaald.
 
-- De ge-identificeerde afschermings patronen zijn generiek en bieden veel mogelijkheden tot
-  afscherming via configuratie van deze patronen
+- De geïdentificeerde afschermings patronen zijn generiek en bieden veel mogelijkheden tot
+  afscherming via configuratie van deze patronen.
 
 - De PoC implementaties laten zien dat veel autorisatie patronen makkelijk implementeerbaar en
-  haalbaar zijn. (Deze implementaties zijn niet bruikbaar voor productie en evt problemen mbt
+  haalbaar zijn. (Deze implementaties zijn niet bruikbaar voor productie en eventuele problemen mbt
   veiligheid en schaalbaarheid zijn niet onderzocht. Zie ook [disclaimer](#disclaimer).)
 
 - Fictieve data van gekoppelde registers in Linked Data is makkelijk te realiseren. 
@@ -97,11 +97,11 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
   optimalisatie van queryplannen kunnen deze queries performant uitvoeren.
 
 - Het afschermen van gegevens zo dicht mogelijk bij de triplestore biedt grotere zekerheid dan
-  afscherming van gegevens door applicaties
+  afscherming van gegevens door applicaties.
 
 - Bewijs dat de queries 'waterdicht' zijn is niet aanwezig in dit project noch was dit de
   doelstelling van de PoC implementaties. Zie ook aanbeveling [Volledigheid en effectiviteit
-  meetbaar maken](#volledigheid-en-effectiviteit-meetbaar-maken)
+  meetbaar maken](#volledigheid-en-effectiviteit-meetbaar-maken).
 
 ### Federatieve bevraging
 
@@ -109,7 +109,7 @@ tot verificatie van de autorisaties (eventueel aan andere partijen, zoals een to
 href="#linked-data-maakt-federatieve-bevraging-gemakkelijk">Linked Data maakt federatieve bevraging
 gemakkelijk</a>**
 
-Een federatieve bevraging is op meerdere manier mogelijk. Een omgeving met REST API's biedt ook wel
+Een federatieve bevraging is op meerdere manieren mogelijk. Een omgeving met REST API's biedt ook wel
 de mogelijkheid voor federatieve bevragingen, maar dit legt een grote beheerlast bij de 'vrager'.
 Met GraphQL zijn daar stappen in gemaakt, maar daarin is nog steeds behoefte aan gateway
 oplossingen.
@@ -128,7 +128,7 @@ testopstelling gemakkelijk</a>**
 Door gebruik te maken van Open Source producten voor Linked Data databases, zogenaamde triplestores, is het opbouwen van een testopstelling relatief gemakkelijk. In onze cloud omgeving wordt
 gebruik gemaakt van Cloud Native tools en daarvoor was nog geen standaard deployment script
 beschikbaar. Tegelijk was het niet extreem moeilijk om, met kennis van zaken natuurlijk, deze te
-ontwikkelen en gebruiken voor de testopstelling.
+ontwikkelen en te gebruiken voor de testopstelling.
 
 Open Source maakte het ook mogelijk om eigen implementaties te ontwikkelen tbv van [autorisatie als
 Linked Data](#autorisatie-als-linked-data). Ons eigen werk is ook openbaar beschikbaar tbv verdere
@@ -160,10 +160,10 @@ elkaar moeten passen. Linked Data biedt daar standaard al enige constructen voor
 transformaties of iets dergelijks te doen. Dit is echter een punt oplossing en moet voor elke query
 opnieuw toegepast worden.
 
-Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te vergemakkelijken, dient minimaal dee data gekoppeld te zijn. Linked
+Om duurzaam over silo's van data heen goed te kunnen navigeren en federatieve bevragingen te vergemakkelijken, dient minimaal deze data gekoppeld te zijn. Linked
 Data biedt hiervoor verschillende mogelijkheden. Een mogelijkheid is bijvoorbeeld om een _upper ontology_ voor de
 registers af te spreken. Door adoptie van deze upper-ontologie kunnen relaties tussen de informatie
-modellen maar ook relaties tussen de datasets toe gevoegd worden. 
+modellen maar ook relaties tussen de datasets toegevoegd worden. 
 
 Zie ook [informatiekundige kern](./federatieve-bevraging/informatiekundigekern.md).
 
@@ -176,15 +176,16 @@ Linked Data biedt veel mogelijkheden voor federatieve bevragingen, expliciete ve
 semantiek, informatiemodellen en begrippen. En met de autorisatie ontologie komt ook afscherming in
 de mogelijkheden van Linked Data. Het succes en toepassen van deze technieken staat of valt echter
 met de adoptiegraad van Linked Data in het algemeen. Het vergroten van deze adoptie is daarom van
-belang. Hierbij Kun je vragen stellen zoals wat is het minimum noodzakelijke voor een registerhouder
+belang. Hierbij kun je vragen stellen zoals wat is het minimum noodzakelijke voor een registerhouder
 om data als Linked data te publiceren. Wat is de minimale infrastructuur hiervoor en hoe kan er snel
-en robuust Linked Data gecreëerd worden.   
+en robuust Linked Data gecreëerd worden.
+Ook onderzoek naar de usecases waarbij Linked Data een grote meerwaarde biedt boven REST API's met autorisatie toevoegingen in de onderliggende implementaties zijn zinvol. Usecases met een beperkt aantal gebruikers (en daardoor beperkte schaalbaarheid implicaties) maar met grote functionele meerwaarde zijn interessante kandidaten om Linked Data toe te passen.
 
 **<a id="autorisatie-ontologie-verder-uitwerken"
 href="#autorisatie-ontologie-verder-uitwerken">Autorisatie ontologie verder uitwerken</a>**
 
-De [Authorisation Ontology](./opleveringen.md#authorisation-ontology) waar in dit project in eerste
-opzet van is gedaan, dient verder te worden uitgewerkt. Idealiter ontstaat er een geadopteerde standaard autorisatie ontologie. Dat betekent ook dat vendors van triple stores deze standaard
+De [Authorisation Ontology](./opleveringen.md#authorisation-ontology) waar in dit project een eerste
+opzet van is gemaakt, dient verder te worden uitgewerkt. Idealiter ontstaat er een geadopteerde standaard autorisatie ontologie. Dat betekent ook dat vendors van triple stores deze standaard
 kunnen implementeren zodat het écht gaat werken. Federatief!
 
 Het is daarin van belang dat ook [alternatieven](./achtergrond/auth-alternatieven.md) goed
@@ -197,7 +198,7 @@ Voor de ontwikkeling zou een W3C Working Group uiteraard een mooi middel zijn!
 richting uitwerken</a>**
 
 In dit project hebben we uitgewerkt en beproefd hoe [verticale en horizontale
-subsets](./afscherming/afschermingspatronen.md#toegang-tot-een-subset) afgeschermd of juist onsloten
+subsets](./afscherming/afschermingspatronen.md#toegang-tot-een-subset) afgeschermd of juist ontsloten
 kunnen worden. We hebben geen aandacht kunnen besteden aan het beperken van de
 [richting](./afscherming/afschermingspatronen.md#toegang-tot-data-in-een-bepaalde-richting). Hier
 dient extra (vervolg)onderzoek op gedaan te worden.
@@ -221,7 +222,7 @@ href="#opvolging-organiseren-tbv-volledigheid-en-effectiviteit">Opvolging organi
 volledigheid en effectiviteit</a>**
 
 Verdere R&D bewijsvoering dat de implementatie waterdicht is. Eventueel in samenwerking met
-academici voor wetenschappelijk fundament.
+academici voor een wetenschappelijk fundament.
 
 **<a id="meer-onderzoek-naar-performance-federatieve-bevraging"
 href="#meer-onderzoek-naar-performance-federatieve-bevraging">Meer onderzoek naar performance
@@ -239,7 +240,7 @@ niet altijd absoluut. Dat wil zeggen dat met 100% zekerheid gesteld kan worden d
 ene silo gerelateerd is aan een object van de andere silo. Het helpt dus om relaties expliciet te
 ontwerpen.
 
-In Linked Data zijn relaties en matching patronen gemakkelijker te leggen en te gebruiken dan
+In Linked Data zijn relaties en matching patronen gemakkelijker te leggen en te gebruiken dan bij
 niet-Linked Data oplossingen. Linked Data is standaard gebaseerd op informatiemodellen en
 ontologieën. Daarom zijn er met Linked Data vele mogelijkheden voor het dynamisch maken en leggen
 van relaties. Heel uitgebreide voorzieningen en afspraken zijn daarom minder noodzakelijk indien
@@ -251,16 +252,16 @@ Daarmee zouden relaties gestandaardiseerd en geformaliseerd kunnen worden. Daarn
 functionele zaken gestandardiseerd kunnen worden. Denk aan "ID"'s en versie beheer en meta-data van
 registers in Linked Data.
 
-Zie hiervoor ook onze uitgebreide beschrijving van deze concepten [informatiekundige
+Zie hiervoor ook onze uitgebreide beschrijving van deze concepten in [informatiekundige
 kern](./federatieve-bevraging/informatiekundigekern.md).
 
 **<a id="meer-onderzoek-naar-performance-van-de-afscherming"
 href="#meer-onderzoek-naar-performance-van-de-afscherming">Meer onderzoek naar performance van de
 afscherming</a>**
 
-Naast de performance van Linked Data oplossing in het geheel, stelt de afscherming nieuwe en extra
-complexiteit verhogende eisen en karakteristieken. Het verdient meer onderzoek naar de performance
-van specifiek dit onderdeel.
+Naast de performance van een Linked Data oplossing in het algemeen, voegt de afscherming nieuwe en extra
+complexiteit verhogende eisen en karakteristieken toe. Onderzoek naar de performance
+van specifiek dit onderdeel verdient meer aandacht.
 
 **<a id="implementaties-doorontwikkelen" href="#implementaties-doorontwikkelen">Implementaties
 doorontwikkelen</a>**
@@ -275,14 +276,14 @@ de verschillende strategieën scherp naast elkaar te zetten; alleen een korte
 Uitgaande dat er gewerkt is aan [standaardiseren van de autorisatie
 ontologie](#autorisatie-ontologie-verder-uitwerken) en dat aanvullend onderzoek is gedaan in
 implementatie strategieën, zouden implementaties wél (of ook) in triplestores toegepast kunnen
-worden. Daarom kan kan bij deze aanbeveling gedacht worden aan vervolgonderzoeken in samenwerking
+worden. Daarom kan bij deze aanbeveling gedacht worden aan vervolgonderzoeken in samenwerking
 met open source projecten als <a href="https://jena.apache.org/" target="_blank">Apache Jena</a>,
 vendors van triplestores en academici.
 
 ## Disclaimer
 
 Dit project is een onderzoeksproject. De [opleveringen](./opleveringen.md) die ontstaan zijn, zijn
-van het niveau Research & Development. Goed ter inspiratie en vervolgonderzoek zeer geschikt. Voor
+van het niveau Research & Development. Goed ter inspiratie en voor vervolgonderzoek zeer geschikt. Voor
 productie ... ongeschikt! :warning:
 
 - :warning: [Authenticatie](./afscherming/autorisatie.md#subject) is uitgesloten van dit project en
