@@ -15,7 +15,7 @@ is een overversimpelde authenticatie ontologie gemaakt met een klasse "User".
 
 |  ![authenticatie](images/User.png)   |
 | :----------------------------------: |
-| User klas in authenticatie ontologie |
+| User class in authenticatie ontologie |
 
 Een standaard gebruiker is alvast aanwezig in deze autorisatie ontologie en dat is de gebruiker
 "anonymous" oftewel een gebruiker die niet ingelogd is. Om gebruikers te definieren kan er een
@@ -83,16 +83,16 @@ zijn voor andere rollen.
 
 ### Regeltypes
 
-Er zijn meerdere regeltypes die elk of een andere functionaliteit bieden om autorisatie te
+Er zijn meerdere regeltypes die elk een andere functionaliteit bieden om autorisatie te
 modelleren. Hieronder een diagram van verschillende regeltypes. 
 
 | ![regeltypes](images/AutO2V2.png) |
 | :-------------------------------: |
 |            Regeltypes             |
 
-Zo is er een regel (`InAccessableService`) die zogenaamde 'service' gebruik binnen SPARQL aan banden
-kan leggen. Andere voorbeelden van regeltypes zijn bijvoorbeeld de regeltype die toegang tot graphs
-kan reguleren, regelype voor het filteren op predicaten (in bepaalde graphs) en de horizontale
+Zo is er een regel (`InAccessableService`) die het zogenaamde 'service' gebruik binnen SPARQL aan banden
+kan leggen. Andere voorbeelden van regeltypes zijn bijvoorbeeld het regeltype dat toegang tot graphs
+kan reguleren, het regeltype voor het filteren op predicaten (in bepaalde graphs) en het horizontale
 subset regeltype. Enkele van deze regeltypes zijn geïmplementeerd zoals regels voor graaf-gebaseerde
 autorisatie, predicaat-gebaseerde autorisatie en horizontale subsets. Het betreft hier wel een
 Proof-of-Concept implementatie. Directionele regels zijn buiten beschouwing gelaten. Het lijkt heel
@@ -110,16 +110,16 @@ welke graven in de triplestore.
 
 Via SecurityGroeps kunnen 'instanties' (of eigenlijk individuals in Linked Data) van deze regel
 (`AccessibleDataset`) gekoppeld worden aan Rollen en Gebruikers. Door de relatie naar een 'Dataset'
-is bekend welke dataset deze gebruiker toegang heeft. "Graven" in de triplestore zijn verbonden met
+is bekend tot welke dataset deze gebruiker toegang heeft. "Graven" in de triplestore zijn verbonden met
 "Datasets" waardoor een implementatie dus precies weet of een gebruiker toegang heeft tot een graaf
 of niet.
 
 ### Predicate-gebaseerde Autorisatieregels
 
 Met de predicate regel is het mogelijk om een predicaat (een soort kenmerk) af te schermen. Een goed
-voorbeeld is "koopsom" in dit project maar ook eigenaar of Naam, Adres, Woonplaats gegevens. Je kunt
-met deze regel de dataset in tact laten maar ervoor zorgen dat gegevens van bepaalde predicaten
-afgeschermd worden. Hieronder is de regeltype afgebeeld.
+voorbeeld is "koopsom" in dit project, maar ook eigenaar of Naam, Adres, Woonplaats gegevens. Je kunt
+met deze regel de dataset intact laten, maar er voor zorgen dat gegevens van bepaalde predicaten
+afgeschermd worden. Hieronder is het regeltype afgebeeld.
 
 |   ![Regeltypes](images/AutO4V2.png)    |
 | :------------------------------------: |
@@ -127,15 +127,15 @@ afgeschermd worden. Hieronder is de regeltype afgebeeld.
 
 De regel heeft een link naar een 'Dataset' waarin de regel actief is en een link naar een
 'Parameter' met een attribuut 'uri' waarin het predicaat genoemd staat. Dit kan dan een link zijn
-naar een predicaat in schema van een dataset. Bijvoorbeeld een link naar het kenmerk "koopsom" in
+naar een predicaat in het schema van een dataset. Bijvoorbeeld een link naar het kenmerk "koopsom" in
 een BRK dataset.
 
 ### Horizontale Subset Regels
 
-Met horizontale regels kunnen we niet op schema nivo maar op dataset nivo zaken afschermen. Denk
-hierbij bijvoorbeeld aan volledige toegang tot alle data elementen maar alleen voor een
+Met horizontale regels kunnen we niet op schema niveau maar op dataset niveau zaken afschermen. Denk
+hierbij bijvoorbeeld aan volledige toegang tot alle data elementen maar alleen voor een specifieke
 registratieve ruimte, bijvoorbeeld een gemeente. Een ander voorbeeld is toegang tot alle pand
-informatie van 'eigen' panden. Hieronder is het model voor regels mbt horizontale subsets
+informatie van 'eigen' panden. Hieronder is het model voor regels mbt horizontale subsets afgebeeld.
 
 | ![Horizontale regels](images/AutO5V2.png) |
 | :---------------------------------------: |
