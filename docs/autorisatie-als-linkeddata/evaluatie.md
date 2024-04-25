@@ -20,14 +20,14 @@ Zie verder ook de [conclusies van de beproevingen](../conclusies.md#conclusies-v
   langzamer.
 
 - Bij iedere verandering van de onderliggende data moeten de _cached_ subgraven opnieuw gegenereerd
-  worden. Bij frequent veranderende data kan dit te veel tijd gaan kosten
+  worden. Bij frequent veranderende data kan dit te veel tijd gaan kosten.
 
 - Met de subgraaf-methode is het niet mogelijk om bewerkingen aan de onderliggende graaf te
   ondersteunen.
 
 ### Rewrite
 
-- Het rewriten van een query is een complex process waarbij makkelijk een fout gemaakt kan worden,
+- Het rewriten van een query is een complex proces waarbij makkelijk een fout gemaakt kan worden,
   waardoor mogelijk meer gegevens beschikbaar worden gesteld dan bedoeld.
 
 - De rewrite methode kan toegepast worden voor het autoriseren van bewerkingen op de onderliggende
