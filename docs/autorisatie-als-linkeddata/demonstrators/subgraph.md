@@ -130,7 +130,7 @@ SELECT * WHERE {
 Een van de krachtigste mogelijkheden van SPARQL is het federatief bevragen van datasets. In de
 onderstaande query koppelen we het NHR en de BRP om de naam en geboortedatum van de UBO van een
 bedrijf te bepalen. Het gedeelte van de query wat uitgevoerd wordt aan de BRP-kant staat in het
-`SERVICE`-blok, waar het persoons-URI wordt gebruikt om de naam en geboortedatum te bepalen.
+`SERVICE`-blok, waar de persoons-URI wordt gebruikt om de naam en geboortedatum te bepalen.
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
