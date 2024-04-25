@@ -18,9 +18,9 @@ maken deze verschillende endpoints federatief te bevragen,
 
 Conceptueel werkt de subgraph methode als volgt:
 
-1. De gebruiker stuurt een query en zijn autorisatiegegevens in.
+1. De gebruiker stuurt een query en zijn autorisatiegegevens.
 2. Het endpoint bepaalt welke autorisatieregels van toepassing zijn voor deze gebruiker.
 3. Voor iedere regel wordt bepaald tot welke gegevens deze toegang verleent.
 4. De toegankelijke gegevens van alle regels worden samengevoegd tot een subgraaf.
-5. De ingestuurde query wordt uitgevoerd op deze subgraaf.
+5. De ingestuurde query wordt uitgevoerd op deze subgraph.
 6. De resultaten van de query worden teruggestuurd naar de gebruiker.
