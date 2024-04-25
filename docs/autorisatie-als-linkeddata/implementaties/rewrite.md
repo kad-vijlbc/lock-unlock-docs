@@ -14,7 +14,7 @@ Conceptueel wordt de query geanalyseerd en worden restricties toegevoegd aan de 
   gecontroleerd of ze geen ontoegankelijke graphs bevragen.
 - Wanneer de query expliciet graphs gebruikt om data op te vragen worden deze gecontroleerd of de
   gebruiker daar toegang toe heeft.
-- Bevat de query geen expliciete grahs dan worden deze toegevoegd aan de query opdat alleen
+- Bevat de query geen expliciete graphs dan worden deze toegevoegd aan de query opdat alleen
   informatie van graphs bevraagd worden waartoe de gebruiker toegang heeft.
 - Horizontale subsets worden geïmplementeerd door resources te voorzien van extra filters die
   koppelingen buiten de horizontale subset eruit filteren.
