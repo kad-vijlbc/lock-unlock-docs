@@ -40,7 +40,7 @@ modellen die de Linked Data datasets beschrijven.
 
 ### Samenvatting
 
-Samengevat zijn de hoofduitgangspunten voor het concept Autorisatie als Linked Data zijn: 
+Samengevat zijn de hoofduitgangspunten voor het concept Autorisatie als Linked Data: 
 
 - Autorisatieregels zijn vastgelegd in Linked Data op basis van een autorisatie ontologie
 - Autorisatieregels zijn beschrijven in RDF format en geinstantieerd op basis van de autorisatie
