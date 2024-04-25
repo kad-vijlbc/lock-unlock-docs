@@ -25,8 +25,8 @@ De Authenticatie ontologie is te downloaden uit de GitHub repository:
 
 ## Logging ontologie
 
-Ten behoefte van de [Query Auditing](./afscherming/oplossingsrichtingen.md#query-auditing) is er een
-eerste begin gemaakt aan het vastleggen van een _(Query) Logging ontologie_.
+Ten behoeve van de [Query Auditing](./afscherming/oplossingsrichtingen.md#query-auditing) is er een
+eerste begin gemaakt met het vastleggen van een _(Query) Logging ontologie_.
 
 De Logging ontologie is te downloaden uit de GitHub repository:
 <br>[lock-unlock-docs/ontologies/Logging.ttl](https://github.com/kadaster-labs/lock-unlock-docs/blob/main/ontologies/Logging.ttl)
@@ -35,7 +35,7 @@ De Logging ontologie is te downloaden uit de GitHub repository:
 ## Secured SPARQL Endpoints
 
 Er zijn twee verschillende [implementaties](./autorisatie-als-linkeddata/implementaties/index.md)
-gerealiseerd. Beide hebben een eigen karakteristieken en voor- en nadelen. Beide implementatie zijn
+gerealiseerd. Beide hebben eigen karakteristieken en voor- en nadelen. Beide implementaties zijn
 gepubliceerd onder een open source licentie:
 
 - [Secured SPARQL Endpoint Sub
